@@ -1,4 +1,4 @@
-@extends('master.layout')
+@extends('layout')
 @section('content')
 
  <!-- ======= Hero Section ======= -->
