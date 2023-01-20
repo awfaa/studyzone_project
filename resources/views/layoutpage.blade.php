@@ -36,23 +36,21 @@
 
 <body>
 
-  <!-- ======= Header =======
-
-  hai everyone-->
+  <!-- ======= Header =======-->
   <header id="header" class="fixed-top d-flex align-items-center header-transparent">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">Rapid</a></h1>
+      <h1 class="logo me-auto" style="font-family: Arial Black"><a href="#hero" style="color: rgb(224, 247, 215)">Study Zone</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#notes">Notes</a></li>
-          <li><a class="nav-link scrollto" href="#Flashcard">Flashcard</a></li>
-          <li><a class="nav-link scrollto " href="#Schedule">Schedule</a></li>
-          <li><a class="nav-link scrollto" href="#studyTracker">Study Tracker</a></li>
+          <li><a class="nav-link scrollto active" href="#hero" style="color: rgb(224, 247, 215)">Home</a></li>
+          <li><a class="nav-link scrollto" href="#notes" style="color: rgb(224, 247, 215)">Notes</a></li>
+          <li><a class="nav-link scrollto" href="#flashcard" style="color: rgb(224, 247, 215)">Flashcard</a></li>
+          <li><a class="nav-link scrollto " href="#schedule" style="color: rgb(224, 247, 215)">Schedule</a></li>
+          <li><a class="nav-link scrollto" href="#studyTracker" style="color: rgb(224, 247, 215)">Study Tracker</a></li>
           {{-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -69,18 +67,18 @@
               <li><a href="#">Drop Down 3</a></li>
               <li><a href="#">Drop Down 4</a></li>
             </ul>
-          </li> --}}
-          <li><a class="nav-link scrollto" href="#footer">Contact</a></li>
+          </li>
+          <li><a class="nav-link scrollto" href="#footer">Contact</a></li>--}}
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <div class="social-links">
+      {{-- <div class="social-links">
         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-      </div>
+      </div> --}}
 
     </div>
   </header><!-- End Header -->
