@@ -135,7 +135,7 @@
                     <h3>Syed Saddiq</h3>
                     <h4>Ex-Student</h4>
                     <p>
-                      This is the best website I ever use! Even though I've finished my study, I still use Study Zone to keep track with my daily tasks.
+                      This is the best website I've ever used! Even though I've finished my study, I still use Study Zone to keep track with my daily tasks.
                     </p>
                   </div>
                 </div><!-- End testimonial item -->
@@ -153,8 +153,7 @@
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h3><span style="color:rgb(28, 124, 20)">Our Team</span></h3>
-          <p>INFO 3305 Web Application Development 2022/2023</p>
-          <p>Section 2 | Group 2<p>
+          <p>INFO 3305 Web Application Development 2022/2023<br>Section 2 | Group 2</p>
 
         </div>
 

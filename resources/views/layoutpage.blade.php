@@ -40,36 +40,50 @@
   <header id="header" class="fixed-top d-flex align-items-center header-transparent">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto" style="font-family: Arial Black"><a href="#hero" style="color: rgb(224, 247, 215)">Study Zone</a></h1>
+      <h1 class="logo me-auto" style="font-family: Arial Black"><a href="#hero" style="color: rgb(32, 88, 10)">Study Zone</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero" style="color: rgb(224, 247, 215)">Home</a></li>
-          <li><a class="nav-link scrollto" href="#notes" style="color: rgb(224, 247, 215)">Notes</a></li>
-          <li><a class="nav-link scrollto" href="#flashcard" style="color: rgb(224, 247, 215)">Flashcard</a></li>
-          <li><a class="nav-link scrollto " href="#schedule" style="color: rgb(224, 247, 215)">Schedule</a></li>
-          <li><a class="nav-link scrollto" href="#studyTracker" style="color: rgb(224, 247, 215)">Study Tracker</a></li>
-          {{-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto active" href="#hero" style="color: rgb(32, 88, 10)">Home</a></li>
+          <li><a class="nav-link scrollto" href="#notes" style="color: rgb(32, 88, 10)">Notes</a></li>
+          <li><a class="nav-link scrollto" href="#flashcard" style="color: rgb(32, 88, 10)">Flashcard</a></li>
+          <li><a class="nav-link scrollto " href="#schedule" style="color: rgb(32, 88, 10)">Schedule</a></li>
+          <li><a class="nav-link scrollto" href="#studyTracker" style="color: rgb(32, 88, 10)">Study Tracker</a></li>
+          <li class="dropdown"><a href="#" style="color: rgb(32, 88, 10)"><span>Me</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
+                @guest
+                <li><a class="nav-link" href="{{ route('login') }}" style="color: rgb(32, 88, 10)">Login</a></li>
+                <li><a class="nav-link" href="{{ route('register') }}" style="color: rgb(32, 88, 10)">Register</a></li>
+
+                @else
+
+                <li class="nav-item"><a class="nav-link" href="{{ logout }}">Logout</a></li>
+
+                @endguest
+              {{-- <li><a href="#">Drop Down 1</a></li>
               <li><a href="#">Drop Down 2</a></li>
               <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Drop Down 4</a></li> --}}
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#footer">Contact</a></li>--}}
+          {{-- <li><a class="nav-link scrollto" href="#footer">Contact</a></li> --}}
         </ul>
+
+        {{-- <ul class="navbar-nav">
+            @guest
+                <li class="nav-item"><a class="nav-link" href="{{ route('login') }}" style="color: rgb(224, 247, 215)">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('register') }}" style="color: rgb(224, 247, 215)">Register</a></li>
+
+            @else
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{ logout }}">Logout</a>
+            </li>
+
+            @endguest
+        </ul> --}}
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
