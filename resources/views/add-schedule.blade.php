@@ -1,6 +1,23 @@
 @extends('layoutpage')
 @section('content')
 
+ <!-- ======= Hero Section ======= -->
+ <section id="hero" class="clearfix" style="background-image: url(assets/img/bg-sched.JPG)">
+    <div class="container d-flex h-100">
+      <div class="row justify-content-center align-self-center" data-aos="fade-up">
+        <div class="col-lg-12 intro-info order-lg-first order-last" data-aos="zoom-in" data-aos-delay="100">
+          <h2><span style="color:rgb(255, 255, 255)">Keep Your Work Organize<br>with </span> <span style="color:rgb(213, 248, 213)">Study Zone</span></h2>
+          <div>
+            <a href="/sched" class="btn-get-started scrollto" style="background-color: #2a642a;">My Schedule</a>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </section><!-- End Hero -->
+
 <section id="add-schedule" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(assets/img/overlay-bg.jpg)">
     <div class="overlay-mf"></div>
     <div class="container">
