@@ -8,13 +8,26 @@
         <div class="col-lg-12 intro-info order-lg-first order-last" data-aos="zoom-in" data-aos-delay="100">
           <h2><span style="color:rgb(255, 255, 255)">Lets Learn with the <br>Flashcard</span> <span style="color:rgb(213, 248, 213)">Study Zone</span></h2>
           <div>
-            <a href="/sched" class="btn-get-started scrollto" style="background-color: #2a642a padding: 15px 32px; text-align: center; color: white;;">My Schedule</a>
+            <a href="/flashcard" class="btn-get-started scrollto" style="background-color: #2a642a padding: 15px 32px; text-align: center; color: white;;">Flashcard</a>
           </div>
         </div>
       </div>
     </div>
   </section><!-- End Hero -->
-
+  <head>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/flashcardstyle.css"/>
+  </head>
   <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(assets/img/overlay-bg.jpg)">
     <div class="overlay-mf"></div>
     <div class="container">
