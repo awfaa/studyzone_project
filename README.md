@@ -1,4 +1,4 @@
-# Group Project Proposal <br> INFO 3305 WEB APPLICATION DEVELOPMENT <br>Section 2<br>2022/2023</br> 
+# Group Project Report <br> INFO 3305 WEB APPLICATION DEVELOPMENT <br>Section 2<br>2022/2023</br> 
 
 ## Group Members
 1. Awfa binti Azlin (2026420)
@@ -11,7 +11,7 @@
 ### StudyZone
 
 ## Introduction 
-We propose to develop a study planner for university students who have trouble managing their time. In order to help students simply keep track of their homework or deadlines, we are working on projects for them that will incorporate notes, flashcards, and class information. Study trackers were also added so that students could focus entirely on the assignments they wished to complete rather than getting distracted by other tasks.
+We developed a study planner for university students who have trouble managing their time. In order to help students simply keep track of their homework or deadlines, we are working on projects for them that will incorporate notes, flashcards, and class information. Study trackers were also added so that students could focus entirely on the assignments they wished to complete rather than getting distracted by other tasks.
 
 ## Objective 
 This project's goal is to examine each person's preferred learning method and give an analysis on how much time the student can concentrate. Alternatively, to evaluate students' dedication. Make sure to block off time on the student calendar for all of their classes, obligations at work, and extracurricular activities. Additionally, students should schedule study time for each topic. It is to estimate how much time students will need to dedicate to each subject they wish to study. Furthermore, a student planner is used to create a schedule allowing them to choose which days they have available for study. Moreover, students can plan their study time according to their preferred methods of learning.
@@ -23,7 +23,7 @@ This project's goal is to examine each person's preferred learning method and gi
 
 * Flashcard - This modul enable the user to get interactive with flashcard study method. By using this app, the user can perform CRUD operation on this app such as Create, Read, Update and Delete the Flashcard titles, description and the flashcards itself.  
 
-* Schedule - In schedule, users can input  class information such as course code, subject, lecturer and time. They also can customize their own preferred study time apart from class hours. From there, it will showcase an overview of the week to keep users in check.
+* Schedule - In schedule, users can input  class information such as course code, subject, day and time, location. From there, it will showcase an overview of the week to keep users in check.
  
 * Study Tracker - Users may get a graphic breakdown of  study hours using a timer. Users will quickly gain a better picture of how much time devote to each course or activity within the course if they keep track of study hours.
 
