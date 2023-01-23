@@ -1,11 +1,4 @@
 
-
-  .container {
-    width: 90vw;
-    max-width: 62.5em;
-    position: absolute;
-    margin-top: 1em;
-  }
   .add-flashcard-con {
     display: flex;
     justify-content: flex-end;
