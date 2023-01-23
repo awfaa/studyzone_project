@@ -10,10 +10,6 @@
           <div>
             <a href="/flashcard" class="btn-get-started scrollto" style="background-color: #2a642a padding: 15px 32px; text-align: center; color: white;;">Study Tracker</a>
           </div>
-          <h2><span style="color:rgb(0, 0, 0)">Keep focus with<br> </span> <span style="color:rgb(100, 3, 3)">Study Tracker</span></h2>
-          {{-- <div>
-            <a href="/sched" class="btn-get-started scrollto" style="background-color: #bded62;">My Study Tracker</a>
-          </div> --}}
         </div>
 
         {{-- <div class="col-lg-6 intro-img order-lg-last order-first" data-aos="zoom-out" data-aos-delay="200">
