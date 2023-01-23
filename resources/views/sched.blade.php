@@ -22,13 +22,14 @@
 
 
 <!-- ======= Schedule Section ======= -->
-<section id="schedule" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-color: #daf7da;">
+<section id="schedule" class="sched-bg" style="background-color: #daf7da;">
     <div class="overlay-mf"></div>
-    <div class="container">
+
+    <div class="container" data-aos="fade-up">
       <div class="row">
         <div class="col-sm-12">
           <div class="contact-mf">
-            <div id="sched" class="box-shadow-full">
+            <div id="sched" class="box">
               <div class="row">
                 <div class="col-md-12">
                   <div class="title-box-2">
@@ -37,15 +38,15 @@
                     </h5>
                   </div>
 
-                  <div>
+                    <div>
                     <table class="table table-hover">
                         <thead>
                           <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Phone Number</th>
+                            <th scope="col">Class Code</th>
+                            <th scope="col">Day</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Class Name</th>
+                            <th scope="col">Location</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -58,10 +59,12 @@
                             <td>{{ $sched->c_location }}</td>
                           </tr>
                           @endforeach
-
+                          <div>
+                            <a href="/add-schedule" class="btn-sched" style="background-color: #2a642a;">Add Class Schedule</a>
+                          </div>
                         </tbody>
                       </table>
-                  </div>
+                    </div>
                 </div>
               </div>
             </div>
