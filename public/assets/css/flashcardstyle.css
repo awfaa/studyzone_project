@@ -34,7 +34,7 @@
     flex-direction: column;
     justify-content: center;
     background-color: #ffffff;
-    position: absolute;
+    position: relative;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
@@ -64,7 +64,7 @@
   }
   .fa-xmark {
     font-size: 1.4em;
-    background-color: #587ef4;
+    background-color: #2a642a;
     height: 1.8em;
     width: 1.8em;
     display: grid;
