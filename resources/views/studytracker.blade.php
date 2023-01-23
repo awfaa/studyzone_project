@@ -31,7 +31,7 @@
     <section id="services" class="services section-bg" style="background-color: rgb(244, 253, 189)">
 
         <header class="section-header">
-            <h3><span style="color:rgb(28, 124, 20)">Pomodoro Timer</span></h3>
+            <h3><span style="color:rgb(7, 33, 4)">Pomodoro Timer</span></h3>
           </header>
 
         {{-- <h2>Pomodoro timer</h2> --}}
