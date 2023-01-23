@@ -41,8 +41,8 @@
           <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="200">
             <div class="box">
               <div class="icon" style="background: #fff0da;"><i class="bi bi-card-checklist" style="color: #e98e06;"></i></div>
-              <h4 class="title"><a href="#notes">Notes</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <h4 class="title"><a href="/notes">Notes</a></h4>
+              <p class="description">Create and save your notes with Study Zone. Say no more to papers and ring binders and organize your notes like a pro!</p>
             </div>
           </div>
 
@@ -50,7 +50,7 @@
             <div class="box">
               <div class="icon" style="background: #e6fdfc;"><i class="bi bi-bar-chart" style="color: #3fcdc7;"></i></div>
               <h4 class="title"><a href="#studyTracker">Study Tracker</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <p class="description">Track your study time and make your study time more efficient with our Study Tracker!</p>
             </div>
           </div>
           {{-- <div class="col-md-6 col-lg-4 wow" data-aos="zoom-in" data-aos-delay="100">
@@ -61,11 +61,11 @@
             </div>
           </div> --}}
 
-          <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="200"">
+          <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="200">
         <div class=" box">
             <div class="icon" style="background: #e1eeff;"><i class="bi bi-brightness-high" style="color: #2282ff;"></i></div>
-            <h4 class="title"><a href="#flashcards">Flashcards</a></h4>
-            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            <h4 class="title"><a href="/flashcard">Flashcards</a></h4>
+            <p class="description">Make your study method more fun with our flashcard feature! Increase your memorization skills.</p>
           </div>
         </div>
 
@@ -73,7 +73,7 @@
           <div class="box">
             <div class="icon" style="background: #ecebff;"><i class="bi bi-calendar4-week" style="color: #8660fe;"></i></div>
             <h4 class="title" ><a href="/sched">Schedule</a></h4>
-            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+            <p class="description">Showcase an overview of your weekly classes to keep on track.</p>
           </div>
         </div>
 
