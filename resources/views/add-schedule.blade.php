@@ -8,7 +8,7 @@
         <div class="col-lg-12 intro-info order-lg-first order-last" data-aos="zoom-in" data-aos-delay="100">
           <h2><span style="color:rgb(255, 255, 255)">Keep Your Work Organize<br>with </span> <span style="color:rgb(213, 248, 213)">Study Zone</span></h2>
           <div>
-            <a href="/sched" class="btn-get-started scrollto" style="background-color: #2a642a;">My Schedule</a>
+            <a href="/sched" class="btn-get-started scrollto" style="background-color: #2a642a padding: 15px 32px; text-align: center; color: white;;">My Schedule</a>
           </div>
         </div>
 
@@ -27,8 +27,8 @@
             <div id="contact" class="box-shadow-full">
               <div class="row">
                 <div class="col-md-12">
-                  <div class="title-box-2">
-                    <h5 class="title-left">
+                  <div class="title-box-2" style="padding: 25px 50px 75px 100px;">
+                    <h5 class="title-left" style="font-weight: bold; background-color: green; opacity: 0.3;">
                       Add Class Schedule
                     </h5>
                   </div>

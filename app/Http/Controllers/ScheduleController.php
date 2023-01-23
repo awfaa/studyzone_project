@@ -40,7 +40,7 @@ class ScheduleController extends Controller
      */
     public function store(Request $request)
     {
-        $sched= new Sched();
+        $sched= new Schedule();
         $sched->c_code=$request->c_code;
         $sched->c_day=$request->c_day;
         $sched->c_time=$request->c_time;
