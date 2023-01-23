@@ -56,3 +56,4 @@ Route::get('/studytracker', function () {
 //  Flashcard Controller
 Route::get('flashcard', [FlashcardController::class, 'index']);
 
+
