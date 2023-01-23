@@ -1,609 +1,468 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169261747-1"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
+<head>
+	<meta charset="utf-8">
+	<title>Pomodoro timer</title>
+</head>
+<body>
+
+	<div id="wrapper">
+		<div id="main-panel">
+			<div id="pomodoro-box">
+				<h2>Pomodoro timer</h2>
+				<div class="time" id="timer">00:00</div>
+				<!-- <div class="time-strip"></div> -->
+				<div class="controls" id="pomodoro-controls">
+					<div class="button-container">
+						<div class="button" id="workButton">work</div>
+						<div class="button-time">25:00</div>
+					</div>
+					<div class="button-container">
+						<div class="button" id="restButton">rest</div>
+						<div class="button-time">5:00</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div id="counter-box">
+				<h2>Sitting timer</h2>
+				<div class="time" id="counter">--:--:--</div>
+				<div class="controls" id="counter-controls">
+					<div class="button" id="resetCounter">reset</div>
+					<div class="button" id="startpauseCounter">
+						<span class="start">start</span>
+						<span class="pause">pause</span>
+					</div>
+				</div>
+			</div>
+			<button id="settingsButton" title="settings">settings</button>
+		</div>
+		<div id="settings-panel">
+			<button id="settingsCloseButton" title="Close settings">Close settings</button>
+			<div id="settings-panel-inner">
+
+				<h2>Settings</h2>
+
+				<h3>Theme</h3>
+				<div>
+					<input type="radio" id="select-theme-default" name="select-theme" value="default" autocomplete="off" checked>
+					<label for="select-theme-default">Default</label>
+				</div>
+
+				<div>
+					<input type="radio" id="select-theme-dark" name="select-theme" value="dark" autocomplete="off" >
+					<label for="select-theme-dark">Dark</label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<style>
+
+		* {
+			box-sizing: border-box;
+		}
+
+		#wrapper {
+			margin-left: auto;
+			margin-right: auto;
+			width: 300px;
+			border: 1px solid #444;
+			text-align: center;
+			background-color: #fbfbfb;
+			position: relative;
+		}
+
+		body[data-theme="dark"] #wrapper {
+			background-color: #222;
+			color: #bbb;
+		}
+
+		button {
+			background-color: #fbfbfb;
+			border: 2px solid #aaa;
+		}
+
+		body[data-theme="dark"] button {
+			background-color: #555;
+		}
+
+		#settingsButton,
+		#settingsCloseButton {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 40px;
+			height: 40px;
+			font-size: 0px;
+			text-indent: -9999px;
+			padding: 2px;
+			border-radius: 4px;
+			background-size: 30px 30px;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+
+		#settingsButton {
+			background-image: url('data:image/png;base64,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');
+		}
+
+		#settingsCloseButton {
+			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACABAMAAAAxEHz4AAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAAT2AAAE9gGYDiZUAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAABVQTFRF////AAAAAAAAAAAAAAAAAAAAAAAAPYbscQAAAAZ0Uk5TAARUp6v7ZOI89wAAAgBJREFUaN6lmruVgzAQRQUVEFCAz9mjBjbYnMQFOKCBxdN/CQ6WtUDoM8/XmY5HfhcQ83UIIYQwfAf58zUdFvPzpu4f1yUthrs91B+ItiWE2UxFGFez5QBgKkI0SwizmYowrmZvhOFupiJEs4Qwm6kIfwA7wg4gIcR9yzYlAAXhH8BsOQAICPG9ZZsSgB8hAZgt4SctvAjxsOX3tPIhHAHskS9FgOctyAgXRRXhKqghFPQ0hJKcglBUUxDKYn6EipYfoSblRagqeRHqQj6Eho4PoSXjQWiqeBDaIn2EjkYfoSfR+76r0DPoX2PbwnGX2yae59yycZ20lpHvrNetnG9b3cz7vtfs3B6nZuj3eWVLweuWTRW/X7KVIk/JWIt9V2sx+l7N1fif28sZSL5Bz4HOO/QUKEPQATIEHSBD+ADgjPABQA1BqQciAygjaDVRZAAlBLUujAzgiqDXxpEB5Ag6QIagA/AfwJdAbyJ+jPQg4aNMXyb8OlOHgl0adarYrdPAgkMbDa44vNMEA6c4NMnCaR5NNHGqS5NtnO7TggOXPLTowmUfLTxx6UuLb1z+0wYEboHQJgxuA9FGFG6F0WYcbgfShiRuidKmLG4L08Y0bo3T5jweD9ABBR6R4CENHhPhQRUeleFhHR8X4oElH5nioS0fG+PBNR+d4+E9+fvAC4KFTDHunKDhAAAAAElFTkSuQmCC');
+		}
+
+		#settings-panel {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 0px;
+			background-color: rgba(255, 255, 255, 0.6);
+			overflow-y: auto;
+		}
+
+		body[data-theme="dark"] #settings-panel {
+			background-color: rgba(0, 0, 0, 0.6);
+		}
+
+		#settings-panel #settings-panel-inner {
+			padding: 40px;
+			text-align: left;
+		}
+
+		#settings-panel h2 {
+			text-align: center;
+		}
+
+		#wrapper.settings-panel-opened #settings-panel {
+			height: 100%;
+		}
+		#wrapper.settings-panel-opened #main-panel {
+			filter: blur(5px);
+		}
+
+		h2 {
+			font-size: 17px;
+			opacity: 0.4;
+		}
+
+		h3 {
+			font-size: 16px;
+			opacity: 0.6;
+		}
+
+		#timer {
+
+		}
+
+		.time {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			font-size: 4.5em;
+			font-family: monospace;
+		}
+
+		.time-strip {
+			width: 100%;
+			height: 10px;
+			border: 1px solid black;
+		}
+
+		.controls {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		#pomodoro-controls .button-container {
+			vertical-align: middle;
+			display: inline-block;
+		}
+
+		#pomodoro-controls .button-container + .button-container {
+			margin-left: 30px;
+		}
+
+		#pomodoro-controls .button-container .button {
+
+		}
+
+		#pomodoro-controls .button-container .button-time {
+			margin-top: 6px;
+			font-family: monospace;
+			font-size: 13px;
+			color: #999;
+			text-shadow: 0px 3px 3px rgba(0,0,0,0.05);
+		}
+
+		#counter-controls .button {
+			vertical-align: middle;
+			display: inline-block;
+		}
+
+		#counter-controls .button + .button {
+			margin-left: 30px;
+		}
+
+		.button {
+			width: 50px;
+			height: 50px;
+			border-radius: 10px;
+			border: 1px solid gray;
+			background-color: rgba(0,0,0,0.1);
+			line-height: 50px;
+			font-size: 30px;
+			transition: all 0.1s ease;
+			cursor: pointer;
+			user-select: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			font-size: 14px;
+		}
+
+		.button:active {
+			background-color: rgba(0,0,0,0.3);
+			transform: scale(0.95);
+		}
+
+
+		#counter-box .button#startpauseCounter.pause-is-active .pause,
+		#counter-box .button#startpauseCounter.start-is-active .start {
+			display: none;
+		}
+
+	</style>
+
+	<script>
+
+		settingsButton.addEventListener('click', function() {
+			wrapper.classList.toggle('settings-panel-opened');
+		});
+
+		settingsCloseButton.addEventListener('click', function() {
+			wrapper.classList.toggle('settings-panel-opened');
+		});
+
+
+		document.querySelectorAll('input[name="select-theme"]').forEach(function(radio) {
+			radio.addEventListener('change', function() {
+				var themeName = this.value;
+				document.body.setAttribute('data-theme', themeName);
+			});
+		});
+
+
+		var pomodoro = {
+			task: null,
+			isPaused: true,
+			workTime: new Date(25*60*1000),
+			restTime: new Date(5*60*1000),
+			timer: {},
+			timeAwait: 0,
+			intervals: [],
+			text: '',
+		};
+
+
+		workButton.addEventListener('click', function() {
+
+			if (pomodoro.task != 'work') {
+				resetPomodoroTimer();
+				pomodoro.task = 'work';
+				pomodoro.timeAwait = pomodoro.workTime;
+
+				clearInterval(pomodoro.timer);
+				pomodoro.timer = setInterval(function() {
+					var timeTheRest = getTimeTheRest();
+					if (timeTheRest < 0) {
+						timeTheRest = 0;
+						resetPomodoroTimer();
+						showMessageTimeIsOver();
+					}
+					renderTimerText(timeTheRest);
+				}, 100);
 			}
-			gtag("js", new Date());
 
-			gtag("config", "UA-169261747-1");
-		</script>
-		<meta charset="utf-8" />
-		<meta property="og:title" content="PomodoroTimers" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://www.pomodorotimers.com" />
-		<meta property="og:image" content="https://www.pomodorotimers.com/assets/img/logo.png" />
-		<meta
-			name="description"
-			content="PomodoroTimers is a simple and configurable Pomodoro timer. It aims to provide a visually-pleasing and reliable way to track productivity using the Pomodoro Technique."
-		/>
-		<meta
-			name="keywords"
-			content="pomodoro technique, tomato timer, pomodoro timer, online pomodoro timer, software timer, pomodoro software timer, productivity tools, gtd, getting things done, productivity, digital timer, concentration techniques, pomodoro resources, pomodoro software, to-do list"
-		/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>PomodoroTimers</title>
+			handlePomodoroControlButtonPress();
 
-		<link
-			rel="stylesheet"
-			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-			crossorigin="anonymous"
-		/>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
-		<script
-			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-			crossorigin="anonymous"
-		></script>
-		<link rel="stylesheet" href="css/styles.css" type="text/css" />
-		<link rel="shortcut icon" type="image/x-icon" href="assets/img/logo.png" />
-		<link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet" />
-	</head>
+		});
 
-	<body>
-		<!-- Scroll Indicator -->
-		<div class="line" id="scrollIndicator"></div>
 
-		<!-- Main Content -->
-		<div class="border-bottom" id="mainPage">
-			<!-- Alert -->
-			<div class="alert alert-danger alert-dismissible fade show" role="alert">
-				<span id="alertMessage"></span>
-				<button type="button" class="close" onclick="dismissAlert()" aria-label="Close">
-					<span aria-hidden="true"><i class="fas fa-times fa-lg mt-1"></i></span>
-				</button>
-			</div>
-			<!-- Brand Name -->
-			<div class="d-flex justify-content-center navbar navbar-light bg-light border-bottom">
-				<nav class="navbar navbar-light bg-light py-0 justify-content-center" id="brand">
-					<a class="navbar-brand" href="/">
-						<img src="assets/img/logo.png" width="50" height="50" class="align-top" alt="PomodoroTimers Logo" />
-						<span id="brandName">PomodoroTimers</span>
-					</a>
-					<!-- Only Visible when small -->
-					<ul class="nav nav-pills justify-content-end">
-						<li class="nav-item">
-							<a class="nav-link px-2 d-md-none button-pressed-no-shadow" data-toggle="modal" data-target="#toDoModal" href="#"
-								><i class="fas fa-tasks fa-lg"></i
-							></a>
-						</li>
-						<li class="nav-item pl-2 pr-0">
-							<a class="nav-link px-2 mx-1 d-md-none button-pressed-no-shadow" data-toggle="modal" data-target="#loggingModal" href="#"
-								><i class="fas fa-chart-bar fa-lg"></i
-							></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pl-2 pr-0 ml-2 d-md-none button-pressed-no-shadow" data-toggle="modal" data-target="#settingsModal" href="#"
-								><i class="fas fa-cog fa-lg"></i
-							></a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-			<!-- NAVBAR -->
-			<div class="container mt-3">
-				<div class="row justify-content-end">
-					<div class="col-6 px-0">
-						<ul class="nav nav-pills">
-							<div class="col-lg-4 px-0">
-								<a class="nav-link active pt-2 nav-underline" id="pomodoros" data-toggle="tab" role="tab" aria-selected="false" href="/">Focus</a>
-							</div>
-							<div class="col-lg-4 px-0">
-								<a class="nav-link pt-2 nav-underline" id="shortBreak" data-toggle="tab" role="tab" aria-selected="false" href="/">Short Break</a>
-							</div>
-							<div class="col-lg-4 px-0">
-								<a class="nav-link pt-2 nav-underline" id="longBreak" data-toggle="tab" role="tab" aria-selected="false" href="/">Long Break</a>
-							</div>
-						</ul>
-					</div>
-					<div class="col-3">
-						<ul class="nav nav-pills justify-content-end">
-							<li class="nav-item">
-								<a class="nav-link px-2 d-none d-md-block button-pressed-no-shadow" data-toggle="modal" data-target="#toDoModal" href="#"
-									><i class="fas fa-tasks fa-lg"></i
-								></a>
-							</li>
-							<li class="nav-item pl-2 pr-0">
-								<a class="nav-link px-2 mx-1 d-none d-md-block button-pressed-no-shadow" data-toggle="modal" data-target="#loggingModal" href="#"
-									><i class="fas fa-chart-bar fa-lg"></i
-								></a>
-							</li>
-							<li class="nav-item">
-								<a
-									class="nav-link pl-2 pr-0 ml-2 d-none d-md-block button-pressed-no-shadow"
-									data-toggle="modal"
-									data-target="#settingsModal"
-									href="#"
-									><i class="fas fa-cog fa-lg"></i
-								></a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- Timer and Buttons -->
-			<div class="container-fluid">
-				<div class="row">
-					<!-- Time Left and Progress Bar -->
-					<div class="col-12 pt-0 d-flex justify-content-center">
-						<div class="radial-progress-bar progress-value">
-							<div class="overlay">
-								<h1 id="timeLeft"></h1>
-							</div>
-						</div>
-					</div>
-					<!-- Start, Stop, Reset Buttons -->
-					<div class="col-12">
-						<div class="container d-flex justify-content-around">
-							<div class="row">
-								<div class="col-md-4">
-									<button type="button" class="button-pressed-effect btn btn-lg btn-success w-100 mb-3" id="startButton">Start</button>
-								</div>
-								<div class="col-md-4">
-									<button type="button" class="button-pressed-effect btn btn-danger btn-lg w-100 mb-3" id="stopButton">Stop</button>
-								</div>
-								<div class="col-md-4">
-									<button type="button" class="button-pressed-effect btn btn-secondary btn-lg w-100 mb-3" id="resetButton">Reset</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		restButton.addEventListener('click', function() {
 
-		<!-- Description of PomodoroTimers -->
-		<div class="site-description container-fluid">
-			<div class="description-section row justify-content-center">
-				<div class="col-10 col-lg-7 mb-4">
-					<h1 class="section-title text-center pb-3">What is PomodoroTimers?</h1>
-					<div class="section-title-border"></div>
-					<div class="section-content">
-						<p>
-							<strong>PomodoroTimers</strong>&nbspis a simple and configurable Pomodoro timer. It aims to provide a visually-pleasing and reliable way
-							to track productivity using the
-							<a class="red-underline red-link" href="https://francescocirillo.com/pages/pomodoro-technique" target="_blank"
-								>&nbspPomodoro Technique</a
-							>. It is customizable and works on both desktop and mobile. The app aims to help you focus on any task you are working on be it study,
-							writing, or coding. This app is inspired by the Pomodoro Technique which is a time management method developed by Francesco Cirillo
-						</p>
-						<p>
-							PomodoroTimers is still in its early stages of development so feedbacks and contributions are definitely welcomed.
-							<a class="blue-underline blue-link" href="https://github.com/yeohyuyong/pomodoro" target="_blank">&nbspHere&nbsp</a>
-							is the link to the source code. Should you have any feedbacks on how I can improve the website, you can drop me an email at&nbsp
-							<a class="blue-underline blue-link" href="mailto: yeoh.yuyong@gmail.com">yeoh.yuyong@gmail.com</a>
-						</p>
-					</div>
-				</div>
-			</div>
+			if (pomodoro.task != 'rest') {
+				resetPomodoroTimer();
+				pomodoro.task = 'rest';
+				pomodoro.timeAwait = pomodoro.restTime;
 
-			<div class="description-section row justify-content-center">
-				<div class="col-10 col-lg-7 mb-4">
-					<h1 class="section-title text-center pb-3">About Pomodoro Technique</h1>
-					<div class="section-title-border"></div>
-					<div class="section-content">
-						<p>
-							The <strong>Pomodoro Technique</strong> is a time management method developed by
-							<a class="red-underline red-link" href="https://francescocirillo.com" target="_blank">Francesco Cirillo&nbsp</a>
-							in the late 1980s. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short
-							breaks. Each interval is known as a pomodoro, from the Italian word for 'tomato', after the tomato-shaped kitchen timer that Cirillo
-							used as a university student.
-						</p>
-						<footer class="blockquote-footer">
-							<cite title="Source Title"
-								><a class="red-underline red-link" href="https://en.wikipedia.org/wiki/Pomodoro_Technique" target="_blank">Wikipedia</a></cite
-							>
-						</footer>
-					</div>
-				</div>
-			</div>
+				clearInterval(pomodoro.timer);
 
-			<div class="description-section row justify-content-center">
-				<div class="col-10 col-lg-7 mb-4">
-					<h1 class="section-title text-center pb-3">How to use PomodoroTimers?</h1>
-					<div class="section-title-border"></div>
-					<div class="section-content">
-						<dl class="row">
-							<dt class="col-sm-2">Step 1</dt>
-							<dd class="col-sm-10">Decide on the task to be done</dd>
-							<dt class="col-sm-2">Step 2</dt>
-							<dd class="col-sm-10">Start working on your task for 25 minutes</dd>
-							<dt class="col-sm-2">Step 3</dt>
-							<dd class="col-sm-10">Take a 5 minute break after 25 minutes is up</dd>
-							<dt class="col-sm-2">Step 4</dt>
-							<dd class="col-sm-10">Repeat steps 1 to 3 until you have complete 4 sessions. Take a longer 20 minute break</dd>
-							<dt class="col-sm-2">Step 5</dt>
-							<dd class="col-sm-10">Go back to step 1 and repeat the process until task is complete</dd>
-						</dl>
-					</div>
-				</div>
-			</div>
+				pomodoro.timer = setInterval(function() {
+					var timeTheRest = getTimeTheRest();
+					if (timeTheRest < 0) {
+						timeTheRest = 0;
+						resetPomodoroTimer();
+						showMessageTimeIsOver();
+					}
+					renderTimerText(timeTheRest);
+				}, 100);
 
-			<div class="description-section row justify-content-center pb-5">
-				<div class="col-10 col-lg-7">
-					<h1 class="section-title text-center pb-3">Why use PomodoroTimers?</h1>
-					<div class="section-title-border"></div>
-					<div class="section-content">
-						<dl class="row">
-							<dt class="col-sm-1">
-								<i class="far fa-hand-point-right fa-2x"></i>
-							</dt>
-							<dd class="col-sm-11 pb-3">Customize times for Focus, Short Breaks and Long Breaks</dd>
-							<dt class="col-sm-1">
-								<i class="far fa-hand-point-right fa-2x"></i>
-							</dt>
-							<dd class="col-sm-11 pb-3">Charming timer alert sounds</dd>
-							<dt class="col-sm-1">
-								<i class="far fa-hand-point-right fa-2x"></i>
-							</dt>
-							<dd class="col-sm-11 pb-3">Logging system to keep track of Focus sessions and breaks</dd>
-							<dt class="col-sm-1">
-								<i class="far fa-hand-point-right fa-2x"></i>
-							</dt>
-							<dd class="col-sm-11 pb-3">Timer ticking sounds (optional)</dd>
-							<dt class="col-sm-1">
-								<i class="far fa-hand-point-right fa-2x"></i>
-							</dt>
-							<dd class="col-sm-11 pb-3">Long break intervals (optional)</dd>
-							<dt class="col-sm-1">
-								<i class="far fa-hand-point-right fa-2x"></i>
-							</dt>
-							<dd class="col-sm-11 pb-3">Multiple background music (optional)</dd>
-							<dt class="col-sm-1">
-								<i class="far fa-hand-point-right fa-2x"></i>
-							</dt>
-							<dd class="col-sm-11 pb-3">Timer ending notification (optional)</dd>
-							<dt class="col-sm-1">
-								<i class="far fa-hand-point-right fa-2x"></i>
-							</dt>
-							<dd class="col-sm-11 pb-3">Dark Mode (optional)</dd>
-						</dl>
-					</div>
-				</div>
-			</div>
-		</div>
+			}
 
-		<!-- Back to top button -->
-		<div class="scrolltop-wrap row">
-			<div class="col-12 d-flex justify-content-center">
-				<!-- <a href="/" role="button" aria-label="Scroll to top"> -->
-				<i class="back-to-top-button fas fa-arrow-circle-up fa-4x button-pressed-no-shadow"></i>
-				<!-- </a> -->
-			</div>
-		</div>
+			handlePomodoroControlButtonPress();
 
-		<!-- Footer -->
-		<div id="siteFooter" class="row mx-0 pt-4 border-top">
-			<div class="col-12 d-flex justify-content-center">
-				<p>
-					<i class="fas fa-code"></i>&nbspwith&nbsp<i class="fas fa-heart"></i>&nbspby&nbsp<a
-						class="blue-underline"
-						href="https://yeohyuyong.github.io"
-						target="_blank"
-						>Yeoh Yu Yong</a
-					>
-				</p>
-			</div>
-			<div class="col-12 d-flex justify-content-center button-pressed-no-shadow">
-				<style>
-					.bmc-button img {
-						height: 34px !important;
-						width: 35px !important;
-						margin-bottom: 1px !important;
-						box-shadow: none !important;
-						border: none !important;
-						vertical-align: middle !important;
+		});
+
+		function handlePomodoroControlButtonPress() {
+			if (pomodoro.isPaused) {
+				pomodoro.intervals.push([new Date]);
+			} else {
+				pomodoro.intervals[pomodoro.intervals.length - 1].push(new Date);
+			}
+			pomodoro.isPaused = !pomodoro.isPaused;
+		}
+
+		function resetPomodoroTimer() {
+			clearInterval(pomodoro.timer);
+			pomodoro.task = null;
+			pomodoro.isPaused = true;
+			pomodoro.intervals = [];
+		};
+
+		function showMessageTimeIsOver() {
+			window.navigator.vibrate([200,30,200,30,200]);
+			alert('Time is over!');
+		}
+
+
+
+		function getTimeTheRest() {
+			var diff = 0;
+			if (pomodoro.intervals.length) {
+				for (var i = 0; i < pomodoro.intervals.length; i++) {
+					if (pomodoro.intervals[i].length == 2) {
+						diff += pomodoro.intervals[i][1] - pomodoro.intervals[i][0];
+					} else if (pomodoro.intervals[i].length == 1) {
+						diff += new Date() - pomodoro.intervals[i][0];
 					}
 
-					.bmc-button {
-						padding: 7px 15px 7px 10px !important;
-						line-height: 35px !important;
-						height: 51px !important;
-						text-decoration: none !important;
-						display: inline-flex !important;
-						color: #ffffff !important;
-						background-color: #ff813f !important;
-						border-radius: 5px !important;
-						border: 1px solid transparent !important;
-						padding: 7px 15px 7px 10px !important;
-						font-size: 28px !important;
-						letter-spacing: 0.6px !important;
-						box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;
-						-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
-						margin: 0 auto !important;
-						font-family: "Cookie", cursive !important;
-						-webkit-box-sizing: border-box !important;
-						box-sizing: border-box !important;
+				}
+			}
+			var timeTheRest = pomodoro.timeAwait - diff;
+			return timeTheRest;
+		}
+
+
+		function renderTimerText(timeTheRest) {
+
+			var diffDate =  new Date(timeTheRest);
+
+			var minutes = withLeadingZero(diffDate.getUTCMinutes());
+			var seconds = withLeadingZero(diffDate.getUTCSeconds());
+
+			var newText = minutes + ':' + seconds;
+
+			if (pomodoro.text != newText) {
+				pomodoro.text = newText;
+				timer.innerHTML = pomodoro.text;
+			}
+
+		}
+
+
+
+		counter.isRun = false;
+		counter.isPaused = true;
+		counter.intervals = [];
+		counter.timer = {};
+		counter.text = '';
+
+
+		startpauseCounter.addEventListener('click', function() {
+
+			if (!counter.isRun) {
+				counter.isRun = true;
+				counter.timer = setInterval(function() {
+					renderCounterText();
+				}, 100);
+			}
+			if (counter.isPaused) {
+				counter.intervals.push([new Date]);
+			} else {
+				counter.intervals[counter.intervals.length - 1].push(new Date);
+			}
+			counter.isPaused = !counter.isPaused;
+			renewStopCounterButton();
+		});
+
+
+		resetCounter.addEventListener('click', function() {
+			if (counter.isRun) {
+				counter.isRun = false;
+				counter.isPaused = true;
+				counter.intervals = [];
+				clearInterval(counter.timer);
+				renewStopCounterButton();
+				renderCounterText();
+			}
+
+		});
+
+		document.addEventListener('DOMContentLoaded', function() {
+			renewStopCounterButton();
+			renderCounterText();
+		});
+
+		function renewStopCounterButton() {
+			if (counter.isPaused) {
+				startpauseCounter.classList.remove('start-is-active');
+				startpauseCounter.classList.add('pause-is-active');
+			} else {
+				startpauseCounter.classList.remove('pause-is-active');
+				startpauseCounter.classList.add('start-is-active');
+			}
+		}
+
+
+		function renderCounterText() {
+
+			var diff = 0;
+			if (counter.intervals.length) {
+				for (var i = 0; i < counter.intervals.length; i++) {
+					if (counter.intervals[i].length == 2) {
+						diff += counter.intervals[i][1] - counter.intervals[i][0];
+					} else if (counter.intervals[i].length == 1) {
+						diff += new Date() - counter.intervals[i][0];
 					}
 
-					.bmc-button:hover,
-					.bmc-button:active,
-					.bmc-button:focus {
-						-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
-						text-decoration: none !important;
-						box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
-						opacity: 0.85 !important;
-						color: #ffffff !important;
-					}
-				</style>
-				<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" /><a
-					class="bmc-button"
-					target="_blank"
-					href="https://www.buymeacoffee.com/yeohyuyong"
-					><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee" /><span
-						style="margin-left: 5px; font-size: 28px !important"
-						>Buy me a coffee</span
-					></a
-				>
-			</div>
-			<div class="col-12 d-flex justify-content-center my-3">
-				<a href="https://github.com/yeohyuyong/pomodoro" target="_blank"><i class="fab fa-github fa-2x px-2 social-icon"></i></a>
-				<a href="https://stackexchange.com/users/14223160/yeoh-yu-yong" target="_blank"
-					><i class="fab fa-stack-overflow fa-2x px-2 social-icon"></i
-				></a>
-				<a href="https://yeohyuyong.github.io" target="_blank"><i class="fas fa-user-circle fa-2x px-2 social-icon"></i></a>
-			</div>
-		</div>
+				}
+			}
 
-		<!-- Modals -->
-		<!-- Settings Modal -->
-		<div
-			class="modal fade"
-			data-keyboard="true"
-			id="settingsModal"
-			tabindex="-1"
-			role="dialog"
-			aria-labelledby="settingsModalLabel"
-			aria-hidden="true"
-		>
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h3 class="modal-title ml-3">Settings</h3>
-						<button type="button" class="close button-pressed-no-shadow" data-dismiss="modal" aria-label="Close">
-							<span class="modal-close-button mt-2" aria-hidden="true"><i class="fas fa-times fa-lg mt-2 mr-2"></i></span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<!-- Selecting Timings -->
-						<div class="row ml-1">
-							<div class="col-12">
-								<p class="h6 text-muted">Time (Minutes)</p>
-							</div>
-							<div class="col-lg-4">
-								<div class="input-group mb-2">
-									<div class="input-group-prepend">
-										<span class="input-group-text" id="inputGroup-sizing-default">Focus</span>
-									</div>
-									<input id="pomodoroInput" type="number" min="1" step="1" class="form-control" />
-								</div>
-							</div>
-							<div class="col-lg-4">
-								<div class="input-group mb-2">
-									<div class="input-group-prepend">
-										<span class="input-group-text" id="inputGroup-sizing-default">Short Break</span>
-									</div>
-									<input id="shortBreakInput" type="number" min="1" step="1" class="form-control" />
-								</div>
-							</div>
-							<div class="col-lg-4">
-								<div class="input-group mb-2">
-									<div class="input-group-prepend">
-										<span class="input-group-text" id="inputGroup-sizing-default">Long Break</span>
-									</div>
-									<input id="longBreakInput" type="number" min="1" step="1" class="form-control" />
-								</div>
-							</div>
-						</div>
+			var diffDate = new Date(diff);
 
-						<hr />
-						<!-- Auto Start Next Round -->
-						<div class="row ml-1">
-							<div class="col">
-								<p class="h6 text-muted mt-2">Auto Start Rounds</p>
-							</div>
-							<div class="col">
-								<label class="switch">
-									<input id="autoStartRoundsInput" type="checkbox" />
-									<span class="slider round"></span>
-								</label>
-							</div>
-						</div>
+			var hours = withLeadingZero(diffDate.getUTCHours());
 
-						<hr />
-						<!-- Long Break Interval -->
-						<div class="row ml-1">
-							<div class="col">
-								<p class="h6 text-muted mt-2">Long Break Interval</p>
-							</div>
-							<div class="col">
-								<form>
-									<div class="row">
-										<div class="col">
-											<input type="range" class="custom-range" min="1" max="12" id="longBreakIntervalInput" />
-										</div>
-										<div class="col">
-											<p class="font-weight-bold" id="sliderValue"></p>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
+			var minutes = withLeadingZero(diffDate.getUTCMinutes());
+			var seconds = withLeadingZero(diffDate.getUTCSeconds());
 
-						<hr />
-						<!-- Tick Sounds -->
-						<div class="row ml-1">
-							<div class="col">
-								<p class="h6 text-muted mt-2">Tick Sounds</p>
-							</div>
-							<div class="col">
-								<label class="switch">
-									<input id="tickSoundInput" type="checkbox" />
-									<span class="slider round"></span>
-								</label>
-							</div>
-						</div>
+			var newText = hours + ':' + minutes + ':' + seconds;
 
-						<hr />
-						<!-- Ending Notification Sound -->
-						<div class="row ml-1">
-							<div class="col-sm-6">
-								<p class="h6 text-muted mt-2">Timer Ending Notification</p>
-							</div>
-							<div class="col-sm-6">
-								<div class="input-group mb-2">
-									<div class="input-group-prepend">
-										<span class="input-group-text notification-text">Last</span>
-									</div>
-									<input id="notificationTextInput" type="number" min="0" step="1" class="form-control col-sm-3" />
-									<div class="input-group-prepend">
-										<span class="input-group-text notification-text">&nbsp&nbspMinutes</span>
-									</div>
-								</div>
-							</div>
-						</div>
+			if (counter.text != newText) {
+				counter.text = newText;
+				counter.innerHTML = counter.text;
+			}
 
-						<hr />
-						<!-- Background Music -->
-						<div class="row ml-1">
-							<div class="col">
-								<p class="h6 text-muted mt-2">Background Music</p>
-							</div>
-							<div class="col">
-								<select class="form-control custom-select" id="backgroundMusicOptions" style="width: 10rem">
-									<option>None</option>
-									<option>Rain</option>
-									<option>Ocean</option>
-									<option>Forest</option>
-									<option>Campfire</option>
-									<option>Windy Desert</option>
-								</select>
-							</div>
-						</div>
+		}
 
-						<hr />
-						<!-- Dark Mode -->
-						<div class="row ml-1">
-							<div class="col">
-								<p class="h6 text-muted mt-2">Dark Mode</p>
-							</div>
-							<div class="col">
-								<label class="switch mb-0">
-									<input id="darkModeToggle" type="checkbox" />
-									<span class="slider round"></span>
-								</label>
-							</div>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<div class="container d-flex justify-content-center my-1">
-							<button type="button" class="btn btn-primary button-pressed-no-shadow shadow-none" data-dismiss="modal" id="saveButton">
-								Save Changes
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- Logging Modal -->
-		<div class="modal fade" data-keyboard="true" id="loggingModal" tabindex="-1" role="dialog" aria-labelledby="loggingModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-xl">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h3 class="modal-title ml-3">Log</h3>
-						<button type="button" class="close button-pressed-no-shadow" data-dismiss="modal" aria-label="Close">
-							<span class="modal-close-button" aria-hidden="true"><i class="fas fa-times fa-lg mt-2 mr-2"></i></span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<div class="log-modal-content">
-							<table class="table table-striped table-responsive-md" id="logDataTable">
-								<thead>
-									<tr>
-										<th scope="col">Session</th>
-										<th scope="col">Date</th>
-										<th scope="col">Start Time</th>
-										<th scope="col">End Time</th>
-										<th scope="col">Time</th>
-										<th scope="col">Description</th>
-										<th scope="col"></th>
-									</tr>
-								</thead>
-								<tbody id="locationUpdateLog"></tbody>
-							</table>
-							<div class="container d-flex justify-content-center">
-								<span id="NoDataLoggedText">No data logged yet</span>
-							</div>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<div class="container d-flex justify-content-center">
-							<button type="button" class="btn btn-primary button-pressed-no-shadow shadow-none" id="clearButton">Clear Log</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- To Do Modal -->
-		<div class="modal fade" data-keyboard="true" id="toDoModal" tabindex="-1" role="dialog" aria-labelledby="toDoModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h3 class="modal-title ml-3">Todo</h3>
-						<button type="button" class="close button-pressed-no-shadow" data-dismiss="modal" aria-label="Close">
-							<span class="modal-close-button" aria-hidden="true"><i class="fas fa-times fa-lg mt-2 mr-2"></i></span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<div class="container todo-main-content">
-							<!-- Task Input  -->
-							<div class="input-group mb-3">
-								<input
-									id="taskInput"
-									type="text"
-									class="form-control"
-									placeholder="Task Description"
-									aria-label="Task name"
-									aria-describedby="addTaskButton"
-								/>
-								<div class="input-group-append">
-									<button class="btn btn-outline-secondary button-pressed-no-shadow" id="addTaskButton" onclick="submitTask()" type="button">
-										Add
-									</button>
-								</div>
-							</div>
-							<div class="container d-flex justify-content-center">
-								<span id="NoTaskTodayText">No tasks for today</span>
-							</div>
-							<!-- Task items -->
-							<ul class="list-group" id="listOfTasks"></ul>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<div class="container d-flex justify-content-center">
-							<button type="button" class="btn btn-primary button-pressed-no-shadow shadow-none" id="clearTasksButton">Clear Tasks</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		function withLeadingZero(val) {
+			val += '';
+			if (val.length == 1) {
+				val = '0' + val;
+			}
+			return val;
+		}
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.js"></script>
-		<script src="js/app.js"></script>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-			crossorigin="anonymous"
-		></script>
-		<script
-			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-			crossorigin="anonymous"
-		></script>
-	</body>
-</html>
+	</script>
+
+</body>
+
