@@ -15,8 +15,9 @@ class notesController extends Controller
      */
     public function index()
     {
-        //
+        return view ('notes');
     }
+
 
     /**
      * Show the form for creating a new resource.
