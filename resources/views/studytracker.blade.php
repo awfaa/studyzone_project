@@ -6,9 +6,11 @@
     <div class="container d-flex h-100">
       <div class="row justify-content-center align-self-center" data-aos="fade-up">
         <div class="col-lg-12 intro-info order-lg-first order-last" data-aos="zoom-in" data-aos-delay="100">
-          <h2><span style="color:rgb(1, 29, 2)">Keep the focus with <br> Study Tracker </span> <span style="color:rgb(1, 19, 1)">Study Zone</span></h2>
+          <h2><span style="color:rgba(1, 29, 2, 0.715)">Keep the focus with <br> Study Tracker </span> <span style="color:rgba(1, 19, 1, 0.82)">Study Zone</span></h2>
           <div>
+            {{-- <div>
             <a href="/flashcard" class="btn-get-started scrollto" style="background-color: #2a642a padding: 15px 32px; text-align: center; color: white;;">Study Tracker</a>
+          </div> --}}
           </div>
         </div>
 
