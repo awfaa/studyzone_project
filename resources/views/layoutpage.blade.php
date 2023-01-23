@@ -47,8 +47,8 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto active" href="/" style="color: rgb(32, 88, 10)">Home</a></li>
-          <li><a class="nav-link scrollto" href="#notes" style="color: rgb(32, 88, 10)">Notes</a></li>
-          <li><a class="nav-link scrollto" href="#flashcard" style="color: rgb(32, 88, 10)">Flashcard</a></li>
+          <li><a class="nav-link scrollto" href="/notes" style="color: rgb(32, 88, 10)">Notes</a></li>
+          <li><a class="nav-link scrollto" href="/flashcard" style="color: rgb(32, 88, 10)">Flashcard</a></li>
           <li><a class="nav-link scrollto " href="/sched" style="color: rgb(32, 88, 10)">Schedule</a></li>
           <li><a class="nav-link scrollto" href="#studyTracker" style="color: rgb(32, 88, 10)">Study Tracker</a></li>
           <li class="dropdown"><a href="#" style="color: rgb(32, 88, 10)"><span>Me</span> <i class="bi bi-chevron-down"></i></a>
