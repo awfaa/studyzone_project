@@ -31,53 +31,53 @@
 
         <div class="row g-5">
 
-          {{-- <div class="col-md-6 col-lg-4 wow bounceInUp" data-aos="zoom-in" data-aos-delay="100">
-            <div class="box">
-              <div class="icon" style="background: #fceef3;"><i class="bi bi-briefcase" style="color: #ff689b;"></i></div>
-              <h4 class="title"><a href="">Schedule</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            {{-- <div class="col-md-6 col-lg-4 wow bounceInUp" data-aos="zoom-in" data-aos-delay="100">
+                <div class="box">
+                <div class="icon" style="background: #fceef3;"><i class="bi bi-briefcase" style="color: #ff689b;"></i></div>
+                <h4 class="title"><a href="">Schedule</a></h4>
+                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                </div>
+            </div> --}}
+            <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+                <div class="box">
+                <div class="icon" style="background: #fff0da;"><i class="bi bi-card-checklist" style="color: #e98e06;"></i></div>
+                <h4 class="title"><a href="/notes">Notes</a></h4>
+                <p class="description">Create and save your notes with Study Zone. Say no more to papers and ring binders and organize your notes like a pro!</p>
+                </div>
             </div>
-          </div> --}}
-          <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="200">
-            <div class="box">
-              <div class="icon" style="background: #fff0da;"><i class="bi bi-card-checklist" style="color: #e98e06;"></i></div>
-              <h4 class="title"><a href="/notes">Notes</a></h4>
-              <p class="description">Create and save your notes with Study Zone. Say no more to papers and ring binders and organize your notes like a pro!</p>
-            </div>
-          </div>
 
-          <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="300">
-            <div class="box">
-              <div class="icon" style="background: #e6fdfc;"><i class="bi bi-bar-chart" style="color: #3fcdc7;"></i></div>
-              <h4 class="title"><a href="#studyTracker">Study Tracker</a></h4>
-              <p class="description">Track your study time and make your study time more efficient with our Study Tracker!</p>
+            <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="300">
+                <div class="box">
+                <div class="icon" style="background: #e6fdfc;"><i class="bi bi-bar-chart" style="color: #3fcdc7;"></i></div>
+                <h4 class="title"><a href="#studyTracker">Study Tracker</a></h4>
+                <p class="description">Track your study time and make your study time more efficient with our Study Tracker!</p>
+                </div>
             </div>
-          </div>
-          {{-- <div class="col-md-6 col-lg-4 wow" data-aos="zoom-in" data-aos-delay="100">
-            <div class="box">
-              <div class="icon" style="background: #eafde7;"><i class="bi bi-binoculars" style="color:#41cf2e;"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-          </div> --}}
+            {{-- <div class="col-md-6 col-lg-4 wow" data-aos="zoom-in" data-aos-delay="100">
+                <div class="box">
+                <div class="icon" style="background: #eafde7;"><i class="bi bi-binoculars" style="color:#41cf2e;"></i></div>
+                <h4 class="title"><a href="">Magni Dolores</a></h4>
+                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                </div>
+            </div> --}}
 
-          <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="200">
-        <div class=" box">
-            <div class="icon" style="background: #e1eeff;"><i class="bi bi-brightness-high" style="color: #2282ff;"></i></div>
-            <h4 class="title"><a href="/flashcard">Flashcards</a></h4>
-            <p class="description">Make your study method more fun with our flashcard feature! Increase your memorization skills.</p>
-          </div>
+            <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+                <div class=" box">
+                    <div class="icon" style="background: #e1eeff;"><i class="bi bi-brightness-high" style="color: #2282ff;"></i></div>
+                    <h4 class="title"><a href="/flashcard">Flashcards</a></h4>
+                    <p class="description">Make your study method more fun with our flashcard feature! Increase your memorization skills.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="300">
+                <div class="box">
+                    <div class="icon" style="background: #ecebff;"><i class="bi bi-calendar4-week" style="color: #8660fe;"></i></div>
+                    <h4 class="title" ><a href="/sched">Schedule</a></h4>
+                    <p class="description">Showcase an overview of your weekly classes to keep on track.</p>
+                </div>
+            </div>
+
         </div>
-
-        <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="300">
-          <div class="box">
-            <div class="icon" style="background: #ecebff;"><i class="bi bi-calendar4-week" style="color: #8660fe;"></i></div>
-            <h4 class="title" ><a href="/sched">Schedule</a></h4>
-            <p class="description">Showcase an overview of your weekly classes to keep on track.</p>
-          </div>
-        </div>
-
-      </div>
 
       </div>
     </section><!-- End Services Section -->
