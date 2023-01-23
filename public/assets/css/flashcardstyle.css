@@ -89,7 +89,7 @@
   }
   #save-btn {
     font-size: 1em;
-    background-color: #587ef4;
+    background-color: #2a642a;
     color: #ffffff;
     padding: 0.6em 0;
     border-radius: 0.3em;
@@ -123,7 +123,7 @@
   }
   .show-hide-btn {
     display: block;
-    background-color: #587ef4;
+    background-color: #2a642a;
     color: #ffffff;
     text-decoration: none;
     text-align: center;
@@ -141,7 +141,7 @@
     font-size: 1.2em;
   }
   .edit {
-    color: #587ef4;
+    color: #2a642a;
   }
   .delete {
     color: #ff5353;
