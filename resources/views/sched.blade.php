@@ -118,6 +118,7 @@
                     </tbody>
                   </table>
                   <div>
+                    <br>
                     <a href="/add-schedule" class="btn-get-started scrollto" style="background-color: #2a642a; border-radius: 12px; padding: 15px 32px; text-align: center; color: white;">Add New Class</a>
                   </div>
                 </div>

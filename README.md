@@ -1,70 +1,52 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Group Project Proposal <br> INFO 3305 WEB APPLICATION DEVELOPMENT <br>Section 2<br>2022/2023</br> 
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Group Members
+1. Awfa binti Azlin (2026420)
+2. Nur Amanina binti Mohd Nubli (2011402)
+3. Nur Athirah binti Zaaba (2011156)
+4. Nurul Izzaty binti Muhammad Aris (2022876)
+5. Wan Maizatul Akmal binti Wan Ahmad Sayuti (2014260)
 
-## About Laravel 
-<!-- Saya punya perubahan di sini 
+## Title 
+### StudyZone
 
-saya tambah komen sini-->
+## Introduction 
+We propose to develop a study planner for university students who have trouble managing their time. In order to help students simply keep track of their homework or deadlines, we are working on projects for them that will incorporate notes, flashcards, and class information. Study trackers were also added so that students could focus entirely on the assignments they wished to complete rather than getting distracted by other tasks.
 
+## Objective 
+This project's goal is to examine each person's preferred learning method and give an analysis on how much time the student can concentrate. Alternatively, to evaluate students' dedication. Make sure to block off time on the student calendar for all of their classes, obligations at work, and extracurricular activities. Additionally, students should schedule study time for each topic. It is to estimate how much time students will need to dedicate to each subject they wish to study. Furthermore, a student planner is used to create a schedule allowing them to choose which days they have available for study. Moreover, students can plan their study time according to their preferred methods of learning.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Features and Functionalities 
+* Homepage - Homepage welcomes user to the website after loging in and registrating process done.It also attract user to other pages; notes page, flashcard page, schedule page and study tracker page via hyperlinks.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+* Notes - Notes page allows users to organize everything including to-do list,  summary of subjects, revisions, lecture notes and all other types of information with no messy folders. Users can navigate through the page to view, add, edit and delete notes by clicking the buttons. 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* Flashcard - This modul enable the user to get interactive with flashcard study method. By using this app, the user can perform CRUD operation on this app such as Create, Read, Update and Delete the Flashcard titles, description and the flashcards itself.  
 
-## Learning Laravel
+* Schedule - In schedule, users can input  class information such as course code, subject, lecturer and time. They also can customize their own preferred study time apart from class hours. From there, it will showcase an overview of the week to keep users in check.
+ 
+* Study Tracker - Users may get a graphic breakdown of  study hours using a timer. Users will quickly gain a better picture of how much time devote to each course or activity within the course if they keep track of study hours.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Entity Relationship Diagram 
+![ERD](https://user-images.githubusercontent.com/96872015/209893118-90356584-f260-4044-b7b9-0fb986e744ba.png)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Sequence Diagram 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* **LoginPage and HomePage**
+![Untitled Diagram-Page-3 drawio](https://user-images.githubusercontent.com/121550893/209890956-358607f3-b0f1-4179-a711-b06121b77a94.png)
 
-## Laravel Sponsors
+* **Notes Page**
+![SD NOTES](https://user-images.githubusercontent.com/96872015/209850991-2b2c595c-cad7-4472-96b2-b17da3d254a6.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+* **Flashcard Page**
+![flashcard_sequenceDiagram](https://user-images.githubusercontent.com/121510950/209852546-9b969d80-1e00-4601-a2dd-29fc86312252.jpg)
 
-### Premium Partners
+* **Schedule Page**
+![Schedule Sequence Diagram](https://user-images.githubusercontent.com/103989049/209851190-afb7ddbd-5b0e-4579-84d0-20155d13abe2.jpg)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+* **Study Tracker Page**
+![SD tracker](https://user-images.githubusercontent.com/96872015/209892982-c94496c4-bfdd-4de9-8ad1-199965a02fa0.png)
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## References 
+* <https://www.markdownguide.org/basic-syntax/> 
+* <https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/>

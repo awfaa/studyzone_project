@@ -27,8 +27,8 @@
             <div id="contact" class="box-shadow-full">
               <div class="row">
                 <div class="col-md-12">
-                  <div class="title-box-2" style="padding: 25px 50px 75px 100px; opacity: 0.3;">
-                    <h5 class="title-left" style="font-weight: bold; background-color: green;">
+                  <div class="title-box-2" style="padding: 25px 50px 75px 100px; ">
+                    <h5 class="title-left" style="font-size:25px; font-weight: bold; padding: 25px 50px 75px 100px;">
                       Add Class Schedule
                     </h5>
                   </div>
@@ -63,7 +63,7 @@
                           </div>
                           <div class="col-md-12 text-center">
                             {{-- <button type="submit" class="button button-a button-big button-rouded">Save</button> --}}
-                            <button type="submit" class="btn-get-started scrollto" style="background-color: #2a642a;">Add</button>
+                            <button type="submit" class="btn-get-started scrollto" style="background-color: #2a642a; border-radius: 12px; padding: 15px 32px; text-align: center; color: white;">Add</button>
                           </div>
                         </div>
                       </form>
