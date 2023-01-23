@@ -40,13 +40,13 @@
   <header id="header" class="fixed-top d-flex align-items-center header-transparent">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto" style="font-family: Arial Black"><a href="#hero" style="color: rgb(32, 88, 10)">Study Zone</a></h1>
+      <h1 class="logo me-auto" style="font-family: Arial Black"><a href="/" style="color: rgb(32, 88, 10)">Study Zone</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero" style="color: rgb(32, 88, 10)">Home</a></li>
+          <li><a class="nav-link scrollto active" href="/" style="color: rgb(32, 88, 10)">Home</a></li>
           <li><a class="nav-link scrollto" href="#notes" style="color: rgb(32, 88, 10)">Notes</a></li>
           <li><a class="nav-link scrollto" href="#flashcard" style="color: rgb(32, 88, 10)">Flashcard</a></li>
           <li><a class="nav-link scrollto " href="#schedule" style="color: rgb(32, 88, 10)">Schedule</a></li>
@@ -59,7 +59,7 @@
 
                 @else
 
-                <li class="nav-item"><a class="nav-link" href="{{ logout }}">Logout</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ 'logout' }}">Logout</a></li>
 
                 @endguest
               {{-- <li><a href="#">Drop Down 1</a></li>
