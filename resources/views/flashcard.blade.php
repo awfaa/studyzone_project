@@ -90,7 +90,7 @@
         </div>
     </section><!-- End Flashcrad Section --> --}}
 
-    <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(assets/img/overlay-bg.jpg)">
+    {{-- <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(assets/img/overlay-bg.jpg)">
         <div class="overlay-mf"></div>
         <div class="container">
           <div class="row">
@@ -155,7 +155,71 @@
             </div>
           </div>
         </div>
-        </section><!-- End Flashcard Section -->
+        </section><!-- End Flashcard Section --> --}}
 
-  @endsection
+ <!-- ======= Services Section ======= -->
+  <section id="services" class="services section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <header class="section-header">
+        <h3><span style="color:rgb(28, 124, 20)">Flashcard</span></h3>
+      </header>
+
+      <div class="row g-5">
+        <div class="col-md-6 col-lg-12" data-aos="zoom-in" data-aos-delay="200">
+          <div class="box">
+
+            <div>
+                <div class="container">
+                    <div class="add-flashcard-con">
+                      <button id="add-flashcard">Add Flashcard</button>
+                    </div>
+
+                    <!-- Display Card of Question And Answers Here -->
+                    <div id="card-con">
+                      <div class="card-list-container"></div>
+                    </div>
+                </div>
+
+                  <!-- Input form for users to fill question and answer -->
+                  <div class="question-container hide" id="add-question-card">
+                    <h2>Add Flashcard</h2>
+                    <div class="wrapper">
+                      <!-- Error message -->
+                      <div class="error-con">
+                        <span class="hide" id="error">Input fields cannot be empty!</span>
+                      </div>
+                      <!-- Close Button -->
+                      <i class="fa-solid fa-xmark" id="close-btn"></i>
+                    </div>
+
+                    <label for="question">Question:</label>
+                    <textarea
+                      class="input"
+                      id="question"
+                      placeholder="Type the question here..."
+                      rows="2"
+                    ></textarea>
+                    <label for="answer">Answer:</label>
+                    <textarea
+                      class="input"
+                      id="answer"
+                      rows="4"
+                      placeholder="Type the answer here..."
+                    ></textarea>
+                    <button id="save-btn">Save</button>
+                  </div>
+
+                  <!-- Script -->
+                  <script src="assets/js/flashcard.js"></script>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Services Section -->
+
+@endsection
 
