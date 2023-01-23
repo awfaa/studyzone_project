@@ -2,13 +2,12 @@
 @section('content')
 
  <!-- ======= Hero Section ======= -->
- <section id="hero" class="clearfix" style="background-image: url(assets/img/bg-studytracker.JPG)">
+ <section id="hero" class="clearfix" style="background-image: url(assets/img/studytracker.JPG)">
     <div class="container d-flex h-100">
       <div class="row justify-content-center align-self-center" data-aos="fade-up">
         <div class="col-lg-12 intro-info order-lg-first order-last" data-aos="zoom-in" data-aos-delay="100">
-          <h2><span style="color:rgb(255, 255, 255)">Keep the focus with <br> Study Tracker </span> <span style="color:rgb(213, 248, 213)">Study Zone</span></h2>
+          <h2><span style="color:rgba(1, 29, 2, 0.715)">Keep the focus with <br> Study Tracker </span> <span style="color:rgba(1, 19, 1, 0.82)">Study Zone</span></h2>
           <div>
-            <a href="/sched" class="btn-get-started scrollto" style="background-color: #bded62;">My Study Tracker</a>
           </div>
         </div>
 
@@ -26,11 +25,17 @@
 	<title>Pomodoro timer</title>
 </head>
 <body>
+    <section id="services" class="services section-bg" style="background-color: rgb(244, 253, 189)">
 
+        <header class="section-header">
+            <h3><span style="color:rgb(7, 33, 4)">Pomodoro Timer</span></h3>
+          </header>
+
+        {{-- <h2>Pomodoro timer</h2> --}}
 	<div id="wrapper">
 		<div id="main-panel">
 			<div id="pomodoro-box">
-				<h2>Pomodoro timer</h2>
+
 				<div class="time" id="timer">00:00</div>
 				<!-- <div class="time-strip"></div> -->
 				<div class="controls" id="pomodoro-controls">
@@ -485,6 +490,6 @@
 		}
 
 	</script>
-
+</section>
 </body>
 @endsection
