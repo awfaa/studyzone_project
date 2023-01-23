@@ -2,7 +2,7 @@
 @section('content')
 
 <!-- ======= Hero Section ======= -->
-<section id="hero" class="clearfix" style="background-image: url(assets/img/bg-flash.JPG)">
+<section id="hero" class="clearfix" style="background-image: url(assets/img/bg-flash.JPeG)">
     <div class="container d-flex h-100">
       <div class="row justify-content-center align-self-center" data-aos="fade-up">
         <div class="col-lg-12 intro-info order-lg-first order-last" data-aos="zoom-in" data-aos-delay="100">
