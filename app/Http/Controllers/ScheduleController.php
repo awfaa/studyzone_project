@@ -15,11 +15,11 @@ class ScheduleController extends Controller
      */
     public function index()
     {
-        $schedule = DB::table('schedule')
+        $schedules = DB::table('schedules')
         ->orderBy('c_code','asc')
         ->get();
 
-        return view ('sched',['schedule'=>$schedule]);
+        return view ('sched',['schedules'=>$schedules]);
     }
 
     /**

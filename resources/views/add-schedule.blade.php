@@ -27,8 +27,8 @@
             <div id="contact" class="box-shadow-full">
               <div class="row">
                 <div class="col-md-12">
-                  <div class="title-box-2" style="padding: 25px 50px 75px 100px;">
-                    <h5 class="title-left" style="font-weight: bold; background-color: green; opacity: 0.3;">
+                  <div class="title-box-2" style="padding: 25px 50px 75px 100px; opacity: 0.3;">
+                    <h5 class="title-left" style="font-weight: bold; background-color: green;">
                       Add Class Schedule
                     </h5>
                   </div>

@@ -106,7 +106,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                        @foreach ($schedule as $sched)
+                        @foreach ($schedules as $sched)
                       <tr>
                         <td>{{ $sched->c_code }}</td>
                         <td>{{ $sched->c_day }}</td>
