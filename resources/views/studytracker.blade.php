@@ -2,14 +2,21 @@
 @section('content')
 
  <!-- ======= Hero Section ======= -->
- <section id="hero" class="clearfix" style="background-image: url(assets/img/bg-studytracker.JPG)">
+ <section id="hero" class="clearfix" style="background-image: url(assets/img/studytracker.JPG)">
     <div class="container d-flex h-100">
       <div class="row justify-content-center align-self-center" data-aos="fade-up">
         <div class="col-lg-12 intro-info order-lg-first order-last" data-aos="zoom-in" data-aos-delay="100">
+<<<<<<< HEAD
           <h2><span style="color:rgb(2, 55, 5)">Keep the focus with <br> Study Tracker </span> <span style="color:rgb(213, 248, 213)">Study Zone</span></h2>
           <div>
             <a href="/flashcard" class="btn-get-started scrollto" style="background-color: #2a642a padding: 15px 32px; text-align: center; color: white;;">Study Tracker</a>
           </div>
+=======
+          <h2><span style="color:rgb(0, 0, 0)">Keep focus with<br> </span> <span style="color:rgb(100, 3, 3)">Study Tracker</span></h2>
+          {{-- <div>
+            <a href="/sched" class="btn-get-started scrollto" style="background-color: #bded62;">My Study Tracker</a>
+          </div> --}}
+>>>>>>> 9fe1e1633f626ffd66c2e4946017367420a54262
         </div>
 
         {{-- <div class="col-lg-6 intro-img order-lg-last order-first" data-aos="zoom-out" data-aos-delay="200">
@@ -26,11 +33,17 @@
 	<title>Pomodoro timer</title>
 </head>
 <body>
+    <section id="services" class="services section-bg" style="background-color: rgb(244, 253, 189)">
 
+        <header class="section-header">
+            <h3><span style="color:rgb(28, 124, 20)">Pomodoro Timer</span></h3>
+          </header>
+
+        {{-- <h2>Pomodoro timer</h2> --}}
 	<div id="wrapper">
 		<div id="main-panel">
 			<div id="pomodoro-box">
-				<h2>Pomodoro timer</h2>
+
 				<div class="time" id="timer">00:00</div>
 				<!-- <div class="time-strip"></div> -->
 				<div class="controls" id="pomodoro-controls">
@@ -485,6 +498,6 @@
 		}
 
 	</script>
-
+</section>
 </body>
 @endsection
