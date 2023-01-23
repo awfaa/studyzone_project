@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ScheduleController;
+use App\Http\Controllers\notesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,6 +39,12 @@ Route::get('logout', function ()
 Route::get('sched', [ScheduleController::class, 'index']);
 Route::resource('addsched', ScheduleController::class);
 
+Route::get('/flashcard', function () {
+    return view('flashcard');
+});
 Route::get('/add-schedule', function () {
     return view('add-schedule');
 });
+
+Route::get('notes', [notesController::class,'index']);
+Route::get('/add-notes',[notesController::class,'index'])->name('notes.index');
