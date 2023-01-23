@@ -8,7 +8,7 @@
         <div class="col-lg-12 intro-info order-lg-first order-last" data-aos="zoom-in" data-aos-delay="100">
           <h2><span style="color:rgb(255, 255, 255)">Keep Your Work Organize<br>with </span> <span style="color:rgb(213, 248, 213)">Study Zone</span></h2>
           <div>
-            <a href="#schedule" class="btn-get-started scrollto" style="background-color: #2a642a;">My Schedule</a>
+            <a href="/sched" class="btn-get-started scrollto" style="background-color: #2a642a;">My Schedule</a>
           </div>
         </div>
 
@@ -72,7 +72,7 @@
         <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="300">
           <div class="box">
             <div class="icon" style="background: #ecebff;"><i class="bi bi-calendar4-week" style="color: #8660fe;"></i></div>
-            <h4 class="title" ><a href="#schedule">Schedule</a></h4>
+            <h4 class="title" ><a href="/sched">Schedule</a></h4>
             <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
           </div>
         </div>
@@ -179,7 +179,7 @@
 
           <div class="col-lg-4 col-md-4" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
-              <img src="assets/img/team-2.jpg" class="img-fluid" alt="">
+              <img src="assets/img/awfa.PNG" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Awfa</h4>

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ScheduleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,3 +34,10 @@ Route::get('logout', function ()
 
     return Redirect::to('/');
 })->name('logout');
+
+Route::get('sched', [ScheduleController::class, 'index']);
+Route::resource('addsched', ScheduleController::class);
+
+Route::get('/add-schedule', function () {
+    return view('add-schedule');
+});
