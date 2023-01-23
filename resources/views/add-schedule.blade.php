@@ -28,7 +28,7 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="title-box-2" style="padding: 25px 50px 75px 100px; ">
-                    <h5 class="title-left" style="font-size:25px; font-weight: bold; padding: 25px 50px 75px 100px;">
+                    <h5 class="title-left" style="font-size:25px; font-weight: bold; text-shadow: 2px 2px 8px #808080; padding: 25px 25px 25px ;">
                       Add Class Schedule
                     </h5>
                   </div>
