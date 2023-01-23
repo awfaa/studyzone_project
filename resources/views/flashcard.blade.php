@@ -11,14 +11,12 @@
             <a href="/sched" class="btn-get-started scrollto" style="background-color: #2a642a padding: 15px 32px; text-align: center; color: white;;">My Schedule</a>
           </div>
         </div>
-
-
       </div>
 
     </div>
   </section><!-- End Hero -->
 
-  <head>
+  <section id="style">
     <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
@@ -31,7 +29,7 @@
     />
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/flashcardstyle.css"/>
-  </head>
+  </section>
 
   <body>
     <div class="container">
