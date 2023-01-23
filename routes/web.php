@@ -5,7 +5,7 @@ use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\notesController;
 use App\Http\Controllers\FlashcardController;
 /*
-|--------------------------------------------------------------------------
+|---------------------------s-----------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
 |
