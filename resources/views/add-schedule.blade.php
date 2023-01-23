@@ -22,7 +22,7 @@
     <div class="overlay-mf"></div>
     <div class="container" data-aos="fade-up">
         <header class="section-header">
-            <h3><span style="color:rgb(28, 124, 20)">Add Class Schedule</span></h3>
+            <h3><span style="color:rgb(28, 124, 20); text-shadow: 2px 2px 8px #808080; padding: 25px 50px 75px 100px;">Add Class Schedule</span></h3>
           </header>
       <div class="row">
         <div class="col-sm-12">
