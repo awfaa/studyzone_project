@@ -38,6 +38,9 @@ Route::get('logout', function ()
 Route::get('sched', [ScheduleController::class, 'index']);
 Route::resource('addsched', ScheduleController::class);
 
+Route::get('/flashcard', function () {
+    return view('flashcard');
+});
 Route::get('/add-schedule', function () {
     return view('add-schedule');
 });
