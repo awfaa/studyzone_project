@@ -47,4 +47,4 @@ Route::get('/add-schedule', function () {
 });
 
 Route::get('notes', [notesController::class,'index']);
-Route::resource('addnotes', notesController::class);
+Route::resource('addnotes',notesController::class);
