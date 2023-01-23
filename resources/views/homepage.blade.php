@@ -46,20 +46,20 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="300">
-                <div class="box">
-                <div class="icon" style="background: #e6fdfc;"><i class="bi bi-bar-chart" style="color: #3fcdc7;"></i></div>
-                <h4 class="title"><a href="#studyTracker">Study Tracker</a></h4>
-                <p class="description">Track your study time and make your study time more efficient with our Study Tracker!</p>
-                </div>
+          <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="box">
+              <div class="icon" style="background: #e6fdfc;"><i class="bi bi-bar-chart" style="color: #3fcdc7;"></i></div>
+              <h4 class="title"><a href="/studytracker">Study Tracker</a></h4>
+              <p class="description">Track your study time and make your study time more efficient with our Study Tracker!</p>
             </div>
-            {{-- <div class="col-md-6 col-lg-4 wow" data-aos="zoom-in" data-aos-delay="100">
-                <div class="box">
-                <div class="icon" style="background: #eafde7;"><i class="bi bi-binoculars" style="color:#41cf2e;"></i></div>
-                <h4 class="title"><a href="">Magni Dolores</a></h4>
-                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                </div>
-            </div> --}}
+          </div>
+          {{-- <div class="col-md-6 col-lg-4 wow" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <div class="icon" style="background: #eafde7;"><i class="bi bi-binoculars" style="color:#41cf2e;"></i></div>
+              <h4 class="title"><a href="">Magni Dolores</a></h4>
+              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>
+          </div> --}}
 
             <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="200">
                 <div class=" box">

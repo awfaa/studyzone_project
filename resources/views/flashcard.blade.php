@@ -7,6 +7,9 @@
       <div class="row justify-content-center align-self-center" data-aos="fade-up">
         <div class="col-lg-12 intro-info order-lg-first order-last" data-aos="zoom-in" data-aos-delay="100">
           <h2><span style="color:rgb(255, 255, 255)">Lets Learn with the <br>Flashcard</span> <span style="color:rgb(213, 248, 213)">Study Zone</span></h2>
+          {{-- <div>
+            <a href="/flashcard" class="btn-get-started scrollto" style="background-color: #2a642a padding: 15px 32px; text-align: center; color: white;;">Flashcard</a>
+          </div> --}}
         </div>
       </div>
     </div>

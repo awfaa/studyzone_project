@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Rapid Bootstrap Template - Index</title>
+  <title>StudyZone</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/me.PNG" rel="icon">
+  <link href="assets/img/me.PNG" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
@@ -50,7 +50,7 @@
           <li><a class="nav-link scrollto" href="/notes" style="color: rgb(32, 88, 10)">Notes</a></li>
           <li><a class="nav-link scrollto" href="/flashcard" style="color: rgb(32, 88, 10)">Flashcard</a></li>
           <li><a class="nav-link scrollto " href="/sched" style="color: rgb(32, 88, 10)">Schedule</a></li>
-          <li><a class="nav-link scrollto" href="#studyTracker" style="color: rgb(32, 88, 10)">Study Tracker</a></li>
+          <li><a class="nav-link scrollto" href="/studytracker" style="color: rgb(32, 88, 10)">Study Tracker</a></li>
           <li class="dropdown"><a href="#" style="color: rgb(32, 88, 10)"><span>Me</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
                 @guest
