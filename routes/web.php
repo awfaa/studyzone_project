@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ScheduleController;
+use App\Http\Controllers\notesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,4 +47,4 @@ Route::get('/add-schedule', function () {
 });
 
 Route::get('notes', [notesController::class,'index']);
-Route::resource('addnotes', notesController::class);
+Route::resource('addnotes',notesController::class);

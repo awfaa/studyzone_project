@@ -6,9 +6,9 @@
     <div class="container d-flex h-100">
       <div class="row justify-content-center align-self-center" data-aos="fade-up">
         <div class="col-lg-12 intro-info order-lg-first order-last" data-aos="zoom-in" data-aos-delay="100">
-          <h2><span style="color:rgb(255, 255, 255)">Keep Your Work Organize<br>with </span> <span style="color:rgb(213, 248, 213)">Study Zone</span></h2>
+          <h2><span style="color:rgb(255, 255, 255)">Write, Plan and Get Organized<br>with </span> <span style="color:rgb(213, 248, 213)">Study Zone</span></h2>
           <div>
-            <a href="/sched" class="btn-get-started scrollto" style="background-color: #2a642a padding: 15px 32px; text-align: center; color: white;;">My Schedule</a>
+            <a href="/sched" class="btn-get-started scrollto" style="background-color: #2a642a padding: 15px 32px; text-align: center; color: white;;">My Notes</a>
           </div>
         </div>
 
@@ -20,7 +20,7 @@
 
 <style>
 body{
-    background: #edf1f5;
+    background: #c5f5e3;
     margin-top:20px;
 }
 .card {
@@ -166,6 +166,9 @@ body{
  }
     </style>
 
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="page-content container note-has-grid">
     <ul class="nav nav-pills p-3 bg-white mb-3 rounded-pill align-items-center">
