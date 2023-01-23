@@ -2,26 +2,24 @@
 @section('content')
 
  <!-- ======= Hero Section ======= -->
- <section id="hero" class="clearfix" style="background-image: url(assets/img/intro-bg.JPG)">
+ <section id="hero" class="clearfix" style="background-image: url(assets/img/bg-sched.JPG)">
     <div class="container d-flex h-100">
       <div class="row justify-content-center align-self-center" data-aos="fade-up">
         <div class="col-lg-12 intro-info order-lg-first order-last" data-aos="zoom-in" data-aos-delay="100">
           <h2><span style="color:rgb(255, 255, 255)">Keep Your Work Organize<br>with </span> <span style="color:rgb(213, 248, 213)">Study Zone</span></h2>
-          <div>
+          {{-- <div>
             <a href="/sched" class="btn-get-started scrollto" style="background-color: #2a642a;">My Schedule</a>
-          </div>
+          </div> --}}
         </div>
 
-        {{-- <div class="col-lg-6 intro-img order-lg-last order-first" data-aos="zoom-out" data-aos-delay="200">
-          <img src="assets/img/intro-img.svg" alt="" class="img-fluid">
-        </div> --}}
+
       </div>
 
     </div>
   </section><!-- End Hero -->
 
 
-<!-- ======= Schedule Section ======= -->
+{{-- <!-- ======= Schedule Section ======= -->
 <section id="schedule" class="sched-bg" style="background-color: #daf7da;">
     <div class="overlay-mf"></div>
 
@@ -74,15 +72,14 @@
         </div>
       </div>
     </div>
-  </section><!-- End Schedule Section -->
+  </section><!-- End Schedule Section --> --}}
 
   <!-- ======= Services Section ======= -->
   <section id="services" class="services section-bg">
     <div class="container" data-aos="fade-up">
 
       <header class="section-header">
-        <h3><span style="color:rgb(28, 124, 20)">Why Study Zone?</span></h3>
-        <p>Study Zone is a place you can organized all of your work and make sure everything is on track.</p>
+        <h3><span style="color:rgb(28, 124, 20)">My Schedule</span></h3>
       </header>
 
       <div class="row g-5">
@@ -118,11 +115,11 @@
                         <td>{{ $sched->c_location }}</td>
                       </tr>
                       @endforeach
-                      <div>
-                        <a href="/add-schedule" class="btn-sched" style="background-color: #2a642a;">Add Class Schedule</a>
-                      </div>
                     </tbody>
                   </table>
+                  <div>
+                    <a href="/add-schedule" class="btn-get-started scrollto" style="background-color: #2a642a;">Add New Class</a>
+                  </div>
                 </div>
 
           </div>
