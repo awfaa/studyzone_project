@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('schedule', function (Blueprint $table) {
             $table->string('c_code', 20)->primary();
-            $table->foreignId('c_day', 10);
+            $table->string('c_day', 10);
             $table->string('c_time', 20);
-            $table->text('class_name', 20);
-            $table->longText('c_location', 20);
+            $table->string('class_name', 20);
+            $table->string('c_location', 20);
         });
     }
 
