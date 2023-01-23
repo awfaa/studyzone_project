@@ -20,7 +20,10 @@
 
 <section id="add-schedule" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(assets/img/overlay-bg.jpg)">
     <div class="overlay-mf"></div>
-    <div class="container">
+    <div class="container" data-aos="fade-up">
+        <header class="section-header">
+            <h3><span style="color:rgb(28, 124, 20)">Add Class Schedule</span></h3>
+          </header>
       <div class="row">
         <div class="col-sm-12">
           <div class="contact-mf">
@@ -28,9 +31,9 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="title-box-2" style="padding: 25px 50px 75px 100px; ">
-                    <h5 class="title-left" style="font-size:25px; font-weight: bold; padding: 25px 50px 75px 100px;">
+                    {{-- <h5 class="title-left" style="font-size:25px; font-weight: bold; text-shadow: 2px 2px 8px #808080; padding: 25px 25px 25px ;">
                       Add Class Schedule
-                    </h5>
+                    </h5> --}}
                   </div>
                   <div>
                     <form action="addsched" method="post" role="form" enctype="multipart/form-data">
