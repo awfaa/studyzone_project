@@ -49,7 +49,7 @@
           <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="300">
             <div class="box">
               <div class="icon" style="background: #e6fdfc;"><i class="bi bi-bar-chart" style="color: #3fcdc7;"></i></div>
-              <h4 class="title"><a href="#studyTracker">Study Tracker</a></h4>
+              <h4 class="title"><a href="/studytracker">Study Tracker</a></h4>
               <p class="description">Track your study time and make your study time more efficient with our Study Tracker!</p>
             </div>
           </div>
