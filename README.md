@@ -47,6 +47,15 @@ This project's goal is to examine each person's preferred learning method and gi
 * **Study Tracker Page**
 ![SD tracker](https://user-images.githubusercontent.com/96872015/209892982-c94496c4-bfdd-4de9-8ad1-199965a02fa0.png)
 
+## Challenges and Difficulties in Developing
+* Intializing the repository to have it editable by other team members in their own machine. We had to research Github's options on platforms to do so and faced many errors and unsynced data. Lastly, we found a way by using Github Desktop and cloning the project, then the leader uses Git Bash to commit and push to this page.
+
+* First phase had a push and pull problem that affected the code everyone has, had to be solved by going through each file to check what went missing and what changes needed to be made.
+
+* After code instillation, there were errors for other members to run, and only one managed to run on their machine succefully. So, the final localhost run has to be done by one member to view the outcome.
+
+* Committing the code by other members that have database have problems with it not adding the change to other member's database page. So, have to import and share the finished SQL in order to run and view.
+
 ## References 
 * <https://www.markdownguide.org/basic-syntax/> 
 * <https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/>
