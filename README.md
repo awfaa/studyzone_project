@@ -58,6 +58,8 @@ This project's goal is to examine each person's preferred learning method and gi
 
 * Committing the code by other members that have database have problems with it not adding the change to other member's database page. So, have to import and share the finished SQL in order to run and view.
 
+* Had a problem with the redirection of authentication features to the pages that were needed. (eg: Login page to redirect to homepage, or Logout page to redirect to Login page again)
+
 ## References 
 * <https://www.markdownguide.org/basic-syntax/> 
 * <https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/>
