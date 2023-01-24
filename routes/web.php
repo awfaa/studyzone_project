@@ -3,8 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\notesController;
+use App\Http\Controllers\FlashcardController;
 /*
-|--------------------------------------------------------------------------
+|---------------------------s-----------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
 |
@@ -36,19 +37,23 @@ Route::get('logout', function ()
     return Redirect::to('/');
 })->name('logout');
 
+// Routes of Schedule
 Route::get('sched', [ScheduleController::class, 'index']);
 Route::resource('addsched', ScheduleController::class);
-
-Route::get('/flashcard', function () {
-    return view('flashcard');
-});
 Route::get('/add-schedule', function () {
     return view('add-schedule');
 });
 
+// Routes of Notes
 Route::get('notes', [notesController::class,'index']);
 Route::get('/add-notes',[notesController::class,'index'])->name('notes.index');
 
+// Route of StudyTracker
 Route::get('/studytracker', function () {
     return view('studytracker');
 });
+
+//  Flashcard Controller
+Route::get('flashcard', [FlashcardController::class, 'index']);
+
+
