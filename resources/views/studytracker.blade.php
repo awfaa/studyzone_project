@@ -6,7 +6,7 @@
     <div class="container d-flex h-100">
       <div class="row justify-content-center align-self-center" data-aos="fade-up">
         <div class="col-lg-12 intro-info order-lg-first order-last" data-aos="zoom-in" data-aos-delay="100">
-          <h2><span style="color:rgba(1, 29, 2, 0.715)">Keep the focus with <br> Study Tracker </span> <span style="color:rgba(1, 19, 1, 0.82)">Study Zone</span></h2>
+          <h2><span style="color:rgba(132, 2, 2, 0.815)">Keep the focus <br> with </span> <span style="color:rgba(19, 1, 1, 0.765)">Study Tracker</span></h2>
           <div>
           </div>
         </div>
@@ -92,10 +92,10 @@
 		#wrapper {
 			margin-left: auto;
 			margin-right: auto;
-			width: 300px;
-			border: 1px solid #444;
+			width: 500px;
+			border: 1px solid rgba(25, 56, 1, 0.705);
 			text-align: center;
-			background-color: #fbfbfb;
+			background-color: #9cff7d;
 			position: relative;
 		}
 
