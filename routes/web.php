@@ -46,7 +46,7 @@ Route::get('/add-schedule', function () {
 
 // Routes of Notes
 Route::get('notes', [notesController::class,'index']);
-Route::get('/add-notes',[notesController::class,'index'])->name('notes.index');
+//Route::get('/add-notes',[notesController::class,'index'])->name('notes.index');
 
 // Route of StudyTracker
 Route::get('/studytracker', function () {
