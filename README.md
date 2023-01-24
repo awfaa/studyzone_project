@@ -51,15 +51,57 @@ This project's goal is to examine each person's preferred learning method and gi
 
 ## Screen Capture of the System
 * Login page
+![image](https://user-images.githubusercontent.com/121550893/214204037-2748366a-0c33-40d3-9abd-6348f71b0de6.png)
+![image](https://user-images.githubusercontent.com/121550893/214204060-b8f798b6-5bf1-4ea0-afc2-f49347a1027c.png)
+![image](https://user-images.githubusercontent.com/121550893/214204088-4ec8ae8c-06f2-4749-ad1d-5b7171323a0d.png)
+
+* Registration page
+![image](https://user-images.githubusercontent.com/121550893/214204173-e38eb5bd-3b51-4bf5-aae6-02d9fcd0634a.png)
+![image](https://user-images.githubusercontent.com/121550893/214204256-8d7f8e5f-6d74-4f76-95d9-a4b2bb0f30b6.png)
+
 * Homepage
+![image](https://user-images.githubusercontent.com/121550893/214203914-b80ced0a-b22a-4330-af7b-0e641d034bad.png)
+![image](https://user-images.githubusercontent.com/121550893/214203875-f79be175-248b-4b12-b7f8-548dc98f6097.png)
+![image](https://user-images.githubusercontent.com/121550893/214203950-829396eb-72c6-4778-98c0-fe7b9e82c3e8.png)
+![image](https://user-images.githubusercontent.com/121550893/214203990-b82fb36f-a3d3-4d57-a9db-2c7d613a07f0.png)
+
 * Notes page
-* Add notes page
+![image](https://user-images.githubusercontent.com/121550893/214204301-a441b0c2-d682-476d-b090-568e390b47e6.png)
+![image](https://user-images.githubusercontent.com/121550893/214204335-cc69e93e-1b08-482a-ade4-7e18285442e9.png)
+![image](https://user-images.githubusercontent.com/121550893/214204374-dc7754df-611c-4e18-b3c2-6199681ee98c.png)
+![image](https://user-images.githubusercontent.com/121550893/214204430-80c7f25c-12fe-4446-991c-676f7bb2b698.png)
+![image](https://user-images.githubusercontent.com/121550893/214204459-74b6ada3-1e15-4219-88f8-1e0cd9ff3585.png)
+
+* Add notes page ??
 * Flashcard page
+![image](https://user-images.githubusercontent.com/121550893/214204578-9ab914bc-d09d-40b2-8708-d526e2fe5dd3.png)
+![image](https://user-images.githubusercontent.com/121550893/214204600-fc31c66d-fb0d-4e50-a4ec-bf647260a2f9.png)
+![image](https://user-images.githubusercontent.com/121550893/214204648-e1bcc1f2-4320-4e2d-a4d0-38295d96dae6.png)
+
 * Add flashcard page
+![image](https://user-images.githubusercontent.com/121550893/214204735-7b5517d3-b790-4e60-a381-35cdca41df75.png)
+![image](https://user-images.githubusercontent.com/121550893/214204798-b794e9df-e863-4a76-9bc5-e8a324554550.png)
+
 * View/Hide flashcard
+![image](https://user-images.githubusercontent.com/121550893/214204896-b636aa61-b844-48a0-86f1-1660f30fa86b.png)
+
 * Schedule
+![image](https://user-images.githubusercontent.com/121550893/214204914-113510db-bb57-4794-a305-a8ab2b2603e4.png)
+![image](https://user-images.githubusercontent.com/121550893/214204931-e1554519-7002-4cd3-a583-7df7a70814f5.png)
+
 * Add class schedule page
+
 * Study tracker page
+![image](https://user-images.githubusercontent.com/121550893/214205058-c6305f49-8279-4100-96ae-c6705747ba0a.png)
+![image](https://user-images.githubusercontent.com/121550893/214205077-67ed69e4-3b4c-4ba9-a786-dd106479dea3.png)
+![image](https://user-images.githubusercontent.com/121550893/214205096-5ffa9efa-0710-4dee-9238-493d7619ec7b.png)
+![image](https://user-images.githubusercontent.com/121550893/214205107-0c37e1ed-a166-4da2-b226-b39f14c28599.png)
+![image](https://user-images.githubusercontent.com/121550893/214205133-f54c3406-0bd8-4d65-b5d0-4289a88d5ae9.png)
+![image](https://user-images.githubusercontent.com/121550893/214205146-d2c4f32f-2279-4495-a232-b753ccbca73a.png)
+![image](https://user-images.githubusercontent.com/121550893/214205167-78f6491b-be73-4ff1-9bf9-925f2953c539.png)
+![image](https://user-images.githubusercontent.com/121550893/214205184-516a014e-3506-43d8-a83b-85ba891a6c47.png)
+![image](https://user-images.githubusercontent.com/121550893/214205200-b5834132-6e9e-49dc-85f5-c93a5510d8b9.png)
+
 
 ## Challenges and Difficulties in Developing
 * Intializing the repository to have it editable by other team members in their own machine. We had to research Github's options on platforms to do so and faced many errors and unsynced data. Lastly, we found a way by using Github Desktop and cloning the project, then the leader uses Git Bash to commit and push to this page.
