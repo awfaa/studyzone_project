@@ -40,7 +40,8 @@ This project's goal is to examine each person's preferred learning method and gi
 ![SD NOTES](https://user-images.githubusercontent.com/96872015/209850991-2b2c595c-cad7-4472-96b2-b17da3d254a6.png)
 
 * **Flashcard Page**
-![flashcard_sequenceDiagram](https://user-images.githubusercontent.com/121510950/209852546-9b969d80-1e00-4601-a2dd-29fc86312252.jpg)
+![FC_Srquence-Page-1](https://user-images.githubusercontent.com/121510950/214200894-b70e2390-63d1-416c-acf4-b963bbb74929.jpg)
+
 
 * **Schedule Page**
 ![Schedule Sequence Diagram](https://user-images.githubusercontent.com/103989049/209851190-afb7ddbd-5b0e-4579-84d0-20155d13abe2.jpg)
