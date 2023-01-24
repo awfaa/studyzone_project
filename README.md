@@ -53,18 +53,34 @@ This project's goal is to examine each person's preferred learning method and gi
 ## Screen Capture of the System
 * Login page
 ![image](https://user-images.githubusercontent.com/121550893/214204037-2748366a-0c33-40d3-9abd-6348f71b0de6.png)
+To login, user need to go to 'Me' dropdown button and click on 'Login' button.
+
 ![image](https://user-images.githubusercontent.com/121550893/214204060-b8f798b6-5bf1-4ea0-afc2-f49347a1027c.png)
+In login page, user need to fill in his email and password and click on 'log in' button.
+
 ![image](https://user-images.githubusercontent.com/121550893/214204088-4ec8ae8c-06f2-4749-ad1d-5b7171323a0d.png)
+User succesfully login to Study Zone.
 
 * Registration page
 ![image](https://user-images.githubusercontent.com/121550893/214204173-e38eb5bd-3b51-4bf5-aae6-02d9fcd0634a.png)
+To register, user need to go to 'Me' dropdown button and click on 'Register' button.
+
 ![image](https://user-images.githubusercontent.com/121550893/214204256-8d7f8e5f-6d74-4f76-95d9-a4b2bb0f30b6.png)
+In register page, user need to fill in his details and click on 'Register' button.
 
 * Homepage
 ![image](https://user-images.githubusercontent.com/121550893/214203914-b80ced0a-b22a-4330-af7b-0e641d034bad.png)
+In homepage, user cansee navigation bar and header section. User can click on any pages in in the navigation bar and
+it will redirect to its page.
+
 ![image](https://user-images.githubusercontent.com/121550893/214203875-f79be175-248b-4b12-b7f8-548dc98f6097.png)
+User can see all of Study Zone's features promoted in 'Why is Study Zone?' section.
+
 ![image](https://user-images.githubusercontent.com/121550893/214203950-829396eb-72c6-4778-98c0-fe7b9e82c3e8.png)
+User can see other users feedback in 'Testimonials' section.
+
 ![image](https://user-images.githubusercontent.com/121550893/214203990-b82fb36f-a3d3-4d57-a9db-2c7d613a07f0.png)
+User can see Study Zone's team members/developers in 'Team' section.
 
 * Notes page
 ![image](https://user-images.githubusercontent.com/121550893/214204301-a441b0c2-d682-476d-b090-568e390b47e6.png)
@@ -73,7 +89,6 @@ This project's goal is to examine each person's preferred learning method and gi
 ![image](https://user-images.githubusercontent.com/121550893/214204430-80c7f25c-12fe-4446-991c-676f7bb2b698.png)
 ![image](https://user-images.githubusercontent.com/121550893/214204459-74b6ada3-1e15-4219-88f8-1e0cd9ff3585.png)
 
-* Add notes page ??
 * Flashcard page
 ![image](https://user-images.githubusercontent.com/121550893/214204578-9ab914bc-d09d-40b2-8708-d526e2fe5dd3.png)
 ![image](https://user-images.githubusercontent.com/121550893/214204600-fc31c66d-fb0d-4e50-a4ec-bf647260a2f9.png)
