@@ -78,16 +78,16 @@ This project's goal is to examine each person's preferred learning method and gi
 ![image](https://user-images.githubusercontent.com/121550893/214204578-9ab914bc-d09d-40b2-8708-d526e2fe5dd3.png)
 ![image](https://user-images.githubusercontent.com/121550893/214204600-fc31c66d-fb0d-4e50-a4ec-bf647260a2f9.png)
 ![image](https://user-images.githubusercontent.com/121550893/214204648-e1bcc1f2-4320-4e2d-a4d0-38295d96dae6.png)
-* This is the flashcard pages where the user can view the flashcards
+This is the flashcard pages where the user can view the flashcards
 
 * Add flashcard page
 ![image](https://user-images.githubusercontent.com/121550893/214204735-7b5517d3-b790-4e60-a381-35cdca41df75.png)
 ![image](https://user-images.githubusercontent.com/121550893/214204798-b794e9df-e863-4a76-9bc5-e8a324554550.png)
-* The add flashcard button enable the user to create a new flashcard with two forms which are question and answer. The new flashcard will be created when the save button is clicked. However this form not allow user to leave the form empty before saving it.
+The add flashcard button enable the user to create a new flashcard with two forms which are question and answer. The new flashcard will be created when the save button is clicked. However this form not allow user to leave the form empty before saving it.
 
 * View/Hide flashcard
 ![image](https://user-images.githubusercontent.com/121550893/214204896-b636aa61-b844-48a0-86f1-1660f30fa86b.png)
-* This flashcard have the features where the user can choose to hide or to show the answer of the flashcards.
+This flashcard have the features where the user can choose to hide or to show the answer of the flashcards.
 
 * Schedule
 ![image](https://user-images.githubusercontent.com/121550893/214204914-113510db-bb57-4794-a305-a8ab2b2603e4.png)
