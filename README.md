@@ -49,6 +49,18 @@ This project's goal is to examine each person's preferred learning method and gi
 * **Study Tracker Page**
 ![SD tracker](https://user-images.githubusercontent.com/96872015/209892982-c94496c4-bfdd-4de9-8ad1-199965a02fa0.png)
 
+## Screen Capture of the System
+* Login page
+* Homepage
+* Notes page
+* Add notes page
+* Flashcard page
+* Add flashcard page
+* View/Hide flashcard
+* Schedule
+* Add class schedule page
+* Study tracker page
+
 ## Challenges and Difficulties in Developing
 * Intializing the repository to have it editable by other team members in their own machine. We had to research Github's options on platforms to do so and faced many errors and unsynced data. Lastly, we found a way by using Github Desktop and cloning the project, then the leader uses Git Bash to commit and push to this page.
 
