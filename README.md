@@ -47,6 +47,7 @@ This project's goal is to examine each person's preferred learning method and gi
 ![Schedule Sequence Diagram](https://user-images.githubusercontent.com/103989049/209851190-afb7ddbd-5b0e-4579-84d0-20155d13abe2.jpg)
 
 * **Study Tracker Page**
+
 ![SD tracker (1)](https://user-images.githubusercontent.com/83502646/214205415-97d20b97-4b26-4db3-bcb8-5414fa9e12dc.jpeg)
 
 ## Screen Capture of the System
