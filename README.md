@@ -37,7 +37,7 @@ This project's goal is to examine each person's preferred learning method and gi
 ![Untitled Diagram-Page-3 drawio](https://user-images.githubusercontent.com/121550893/209890956-358607f3-b0f1-4179-a711-b06121b77a94.png)
 
 * **Notes Page**
-![SD NOTES](https://user-images.githubusercontent.com/96872015/209850991-2b2c595c-cad7-4472-96b2-b17da3d254a6.png)
+![SD NOTES new](https://user-images.githubusercontent.com/96872015/214203357-6aca0ff2-b38e-42ed-8c83-93e5b875fc72.png)
 
 * **Flashcard Page**
 ![FC_Srquence-Page-1](https://user-images.githubusercontent.com/121510950/214200894-b70e2390-63d1-416c-acf4-b963bbb74929.jpg)
